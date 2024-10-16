@@ -16,18 +16,18 @@ const SplitTextAnimations = () => {
           const tl2 = gsap.timeline({
             scrollTrigger: {
               trigger: char,
-              start: "top 95%", // Inizia l'animazione più tardi
-              end: "bottom 50%", // Termina l'animazione più presto
+              start: "top 90%",
+              end: "bottom 60%",
               scrub: false,
               markers: false,
               toggleActions: "play none none none",
             },
           });
 
-          const charDelay = index * 0.05; // Aumenta il ritardo tra i caratteri
+          const charDelay = index * 0.03;
 
           tl2.from(char, {
-            duration: 1.5, // Aumenta la durata dell'animazione
+            duration: 0.8,
             x: 70,
             delay: charDelay,
             autoAlpha: 0,
@@ -53,6 +53,7 @@ const SplitTextAnimations = () => {
       });
     }
   }, []);
+
   return null;
 };
 

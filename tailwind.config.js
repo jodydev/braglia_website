@@ -20,6 +20,42 @@ module.exports = {
       fontFamily: {
         involve: ['Involve-Regular', 'sans-serif'],
       },
+      keyframes: {
+        fadeInTop: {
+          '0%': { opacity: '0', transform: 'translateY(-20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeInBottom: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeInLeft: {
+          '0%': { opacity: '0', transform: 'translateX(-20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        fadeInRight: {
+          '0%': { opacity: '0', transform: 'translateX(20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        spin: {
+          from: { transform: 'rotate(0deg)' },
+          to: { transform: 'rotate(360deg)' },
+        },
+        moveX: {
+          from: { left: '0' },
+          to: { left: '100%' },
+        },
+        moveY: {
+          from: { top: '0' },
+          to: { top: '100%' },
+        },
+      },
+      animation: {
+        fadeInTop: 'fadeInTop 1.5s ease-out',
+        fadeInBottom: 'fadeInBottom 1.5s ease-out',
+        fadeInLeft: 'fadeInLeft 1.5s ease-out',
+        fadeInRight: 'fadeInRight 1.5s ease-out',
+      },
     },
   },
   plugins: [],

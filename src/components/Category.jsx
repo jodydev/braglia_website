@@ -5,12 +5,11 @@ import "slick-carousel/slick/slick-theme.css";
 import  category  from "../data/category";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
-
 const Category = () => {
   const { t } = useTranslation();
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: false,
     speed: 500,
     slidesToShow: 4,
@@ -55,7 +54,7 @@ const Category = () => {
                 alt={item.name}
                 className="object-cover flex items-center justify-center w-full h-full"
               />
-              <h3 className="text-2xl xl:text-4xl uppercase text-center mt-6 flex items-center justify-center">{item.name}</h3>
+              <h3 className="title-animation text-2xl xl:text-4xl uppercase text-center mt-6 flex items-center justify-center">{item.name}</h3>
             </div>
           ))}
         </Slider>
