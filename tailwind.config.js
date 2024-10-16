@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#285546', // Verde
+        primary: '#234436', // Verde
         secondary: '#c8ae92', // Crema
       },
       screens: {
