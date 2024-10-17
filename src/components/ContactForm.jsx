@@ -88,7 +88,7 @@ const ContactForm = () => {
   return (
     <section
       id="contact-form"
-      className="flex-row h-100 w-screen bg-white relative md:p-20"
+      className="flex-row h-100 w-screen md:p-20"
     >
       <div className="flex-col">
         <h2 className="text-black md:text-6xl xl:text-8xl italic w-full -z-50 mb-20">Contatti</h2>

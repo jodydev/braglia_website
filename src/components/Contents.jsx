@@ -17,11 +17,11 @@ const Contents = () => {
               className="w-full h-auto hover:scale-105 transition-all duration-500 ease-in-out shadow-lg rounded-2xl"
             />
           </div>
-          <div className="md:w-1/2 p-5">
+          <div className={`${index === 0 || 2 ? "" : ""} md:w-1/2 p-5`}>
             <h3 className="title-animation text-6xl 2xl:text-8xl font-bold mb-4">
               {content.title}
             </h3>
-            <p className="title-animation italic mt-10 2xl:text-2xl">{content.text}</p>
+            <p className="italic mt-10 2xl:text-2xl">{content.text}</p>
           </div>
         </div>
       ))}

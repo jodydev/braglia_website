@@ -33,7 +33,7 @@
 /* Base styles for body and html */
 body {
   font-family: 'Involve-Medium', sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 html {
@@ -58,4 +58,32 @@ input[type="checkbox"]:checked {
 input[type="checkbox"]:focus {
   outline: none !important;
   box-shadow: none !important;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    background-color: black;
+  }
+  to {
+    transform: translateX(0);
+    background-color: white;
+  }
+}
+
+.slide-in {
+  animation: slideIn 1s ease-out forwards;
+}
+
+::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #234436;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
 }

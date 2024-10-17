@@ -77,11 +77,11 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-10 md:bottom-20 left-0 right-0 flex justify-center items-center p-4 md:p-10 text-white">
-        <div className="flex-col space-y-4 md:space-y-10">
+      <div className="w-full absolute bottom-10 md:bottom-20 left-0 right-0 flex justify-center items-center p-4 md:p-10 text-white">
+        <div className="z-50 flex-col space-y-4 md:space-y-10">
           <div className="border-2 border-white rounded-full text-center p-2 md:p-3 text-white hover:bg-white hover:text-primary hover:cursor-pointer transition-all duration-1000 ease-in-out">
-            <a className="text-lg md:text-2xl uppercase " href="#category">
-              <RiArrowDownWideFill className="text-2xl md:text-4xl" />
+            <a className="text-lg md:text-2xl " href="#category">
+              <RiArrowDownWideFill className=" text-2xl md:text-4xl" />
             </a>
           </div>
         </div>
