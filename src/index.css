@@ -34,12 +34,28 @@
 body {
   font-family: 'Involve-Medium', sans-serif;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 html {
-  scroll-behavior: unset !important;
+  scroll-behavior: smooth !important;
   min-height: 100vh;
   height: 100%;
   overflow-x: hidden !important;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: black !important;
+  box-shadow: none !important;
+}
+
+input[type="checkbox"]:checked {
+  background-color: black !important;
+  border-color: black !important;
+}
+
+input[type="checkbox"]:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }
