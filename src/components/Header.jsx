@@ -8,6 +8,7 @@ const Header = ({ isContactPage, isCatalogPage }) => {
   const [activeLanguage, setActiveLanguage] = useState(i18n.language);
 
   const changeLanguage = (lng) => {
+    console.log(lng);
     i18n.changeLanguage(lng);
     setActiveLanguage(lng);
   };
@@ -15,14 +16,16 @@ const Header = ({ isContactPage, isCatalogPage }) => {
   return (
     <header
       className={`flex justify-between items-center z-50 ${
-        isContactPage ? "p-4 md:p-10 2xl:p-20" : ""
+        isContactPage || isCatalogPage ? "p-4 md:p-10 2xl:p-20" : ""
       }`}
     >
       <a href="/">
         <img
           src={Logo}
           alt="Logo"
-          className={`h-24 w-60 ${isContactPage ? "filter invert" : ""}`}
+          className={`h-24 w-60 ${
+            isContactPage || isCatalogPage ? "filter invert" : ""
+          }`}
         />
       </a>
       <div
@@ -51,14 +54,14 @@ const Header = ({ isContactPage, isCatalogPage }) => {
         </div>
         <div className="flex space-x-5">
           <div
-            className={`border-2 rounded-full text-center py-3 md:px-4 xl:px-5 xl:py-4 ${
-              isContactPage
-                ? "border-black text-black hover:bg-black hover:text-white"
-                : "text-white hover:bg-white hover:text-black"
-            } ${
+            className={`border-2 rounded-full text-center py-3 md:py-4 md:px-5 xl:px-5 xl:py-4 ${
               activeLanguage === "it"
                 ? "bg-black text-white border-black"
-                : "border-white"
+                : activeLanguage && isCatalogPage
+                ? "border-black text-black"
+                : activeLanguage && isContactPage
+                ? "border-black text-black"
+                : "border-white text-white hover:bg-white hover:text-black"
             } hover:cursor-pointer transition-all duration-1000 ease-in-out`}
           >
             <button
@@ -70,13 +73,13 @@ const Header = ({ isContactPage, isCatalogPage }) => {
           </div>
           <div
             className={`border-2 rounded-full text-center p-4 ${
-              isContactPage
-                ? "border-black text-black hover:bg-black hover:text-white"
-                : "text-white hover:bg-white hover:text-black"
-            } ${
               activeLanguage === "en"
                 ? "bg-black text-white border-black"
-                : "border-white"
+                : activeLanguage && isCatalogPage
+                ? "border-black text-black"
+                : activeLanguage && isContactPage
+                ? "border-black text-black"
+                : "border-white text-white hover:bg-white hover:text-black"
             } hover:cursor-pointer transition-all duration-1000 ease-in-out`}
           >
             <button

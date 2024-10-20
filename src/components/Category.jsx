@@ -1,9 +1,9 @@
-import { useTranslation } from "react-i18next";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import  category  from "../data/category";
+import { useTranslation } from "react-i18next";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
+import Slider from "react-slick";
+import  categoriesData  from "../data/categoriesData";
 
 const Category = () => {
   const { t } = useTranslation();
@@ -43,7 +43,7 @@ const Category = () => {
 
       <div className="flex items-center justify-center md:py-32 md:px-10 xl:px-60">
         <Slider {...settings} className="w-full">
-          {category.items.map((item) => (
+          {categoriesData.categories.map((item) => (
             <div
               key={item.id}
               className="flex flex-col justify-center items-center"

@@ -36,7 +36,7 @@ const CatalogForm = () => {
           />
         </p>
       </div>
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row justify-between mt-20 xl:mt-0">
         <div className="flex justify-end items-start w-2/3">
           <div className="flex flex-col w-full max-w-2xl">
             {categories.map((category, index) => (

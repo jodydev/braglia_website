@@ -13,7 +13,7 @@ const Catalog = () => {
   return (
     <div
       id="catalog"
-      className={`overflow-y-scroll h-screen w-screen bg-white ${animate ? 'slide-in' : ''}`}
+      className={`h-full w-full bg-white ${animate ? 'slide-in' : ''}`}
     >
       <Header isCatalogPage={true} />
       <CatalogForm />
