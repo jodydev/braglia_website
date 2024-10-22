@@ -19,7 +19,7 @@ const Contents = ({ isCompanyPage }) => {
   }));
 
   return (
-    <div className="container mx-auto 2xl:px-60 py-8">
+    <div className="container mx-auto 2xl:px-60">
       {isCompanyPage
         ? translatedCompanyContents.map((content, index) => (
             <div

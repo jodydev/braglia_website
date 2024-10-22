@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import Logo from "../assets/images/logo.png";
+import Logo from "../assets/images/loghi/logo.png";
 import { FaPlus } from "react-icons/fa";
 
 const Header = ({ isContactPage, isCatalogPage }) => {

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
-import  categoriesData  from "../data/categoriesData";
+import categoriesData from "../data/categoriesData";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -40,7 +40,7 @@ const Category = () => {
   return (
     <section
       id="categories"
-      className="h-screen w-screen bg-white relative p-4 md:p-10 2xl:p-20"
+      className="h-100 w-screen bg-white relative p-4 md:p-10 2xl:p-20"
     >
       <h2 className="text-primary md:text-6xl xl:text-8xl underline italic">
         {t("categories")}
@@ -51,15 +51,20 @@ const Category = () => {
           {translatedCategories.map((item) => (
             <div
               key={item.id}
-              className="flex flex-col justify-center items-center w-[250px] h-[250px]"
-              style={{ outline: 'none' }}
+              className="flex flex-col justify-center items-center w-full h-full focus:outline-none cursor-pointer transition-transform duration-500"
             >
-              <img
-                src={item.image}
-                alt={item.name}
-                className="object-cover flex items-center justify-center w-[250px] h-[250px]"
-              />
-              <h3 className="title-animation text-2xl xl:text-4xl uppercase text-center lg:me-12 mt-6 flex items-center justify-center">{item.name}</h3>
+              <div className="relative overflow-hidden w-full h-[250px] lg:h-[300px] xl:h-[350px]">
+                {" "}
+                {/* Fixed height for consistency */}
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="object-cover lg:ms-6 xl:ms-16 lg:w-[250px] lg:h-[250px] xl:w-[350px] xl:h-[350px] transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+              <h3 className="title-animation text-xl md:text-2xl xl:text-3xl uppercase text-center lg:mt-4 xl:mt-10 flex items-center justify-center">
+                {item.name}
+              </h3>
             </div>
           ))}
         </Slider>

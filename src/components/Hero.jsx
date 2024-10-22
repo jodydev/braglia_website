@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { RiArrowDownWideFill } from "react-icons/ri";
 import Header from "./Header";
-import Equals from "../assets/icons/equals.png";
 import BackgroundAnimation from "./BackgroundAnimation";
+import Image from "../assets/images/hero/hero.png";
 import { FaDroplet, FaCircle, FaSquareFull } from "react-icons/fa6";
 import { RiEqualFill } from "react-icons/ri";
 import { TbMedicalCrossFilled } from "react-icons/tb";
@@ -19,39 +19,8 @@ const Hero = () => {
 
       <div className="flex flex-col relative z-50 space-y-0">
         <Header />
-        <main className="px-4 py-8 md:px-20 md:py-16 lg:px-24 lg:py-20 2xl:px-60 2xl:py-32  space-y-3">
-          <div className="relative flex md:h-[130px] xl:h-[170px] 2xl:h-[220px] items-center">
-            <p className="text-[80px] lg:text-[130px] 2xl:text-[260px] tracking-[10px] lg:tracking-[30px] xl:tracking-[50px] text-white font-bold">
-              BR
-            </p>
-            <TbMedicalCrossFilled className="h-20 w-20 lg:h-28 lg:w-28 xl:h-44 xl:w-44 text-white" />
-
-            <span className="absolute bottom-10 left-[200px] lg:bottom-24 lg:left-[340px] 2xl:bottom-40 2xl:left-[600px] text-white text-[30px] md:text-[50px] lg:text-[50px]">
-              ©
-            </span>
-          </div>
-          <div className="flex md:h-[130px] xl:h-[170px] 2xl:h-[220px] items-center">
-            <FaDroplet className="h-20 w-20 lg:h-28 lg:w-28 xl:h-44 xl:w-44 text-white" />
-
-            <p className="ms-4 text-[80px] lg:text-[130px] 2xl:text-[260px] tracking-[10px] lg:tracking-[30px] xl:tracking-[50px] text-white font-bold">
-              AG
-            </p>
-          </div>
-          <div className="relative flex md:h-[130px] xl:h-[170px] 2xl:h-[220px] items-center">
-            <p className="text-[80px] lg:text-[130px] 2xl:text-[260px] tracking-[10px] lg:tracking-[10px] xl:tracking-[50px] text-white font-bold">
-              LIA
-            </p>
-            <RiEqualFill className="h-20 w-20 lg:h-28 lg:w-28 xl:h-44 xl:w-44 text-white" />
-
-            <span className="absolute bottom-[-10px] md:bottom-[-20px] lg:bottom-[0px] left-[200px] md:left-[100px] lg:left-[265px] text-white text-[30px] md:text-[40px] lg:text-[24px]">
-              MFG
-            </span>
-          </div>
-          <div className="ms-2 w-full">
-            <p className="text-[20px] md:text-[30px] lg:text-[24px] uppercase text-white">
-              {t("Fluid sparaing and engineering")}
-            </p>
-          </div>
+        <main className="px-4 py-8 md:px-20 md:py-16 lg:px-24 lg:py-20 2xl:px-60 2xl:py-40  space-y-3">
+          <img src={Image} alt="Hero Image" className="lg:h-1/3 lg:w-1/3" />
         </main>
       </div>
 
