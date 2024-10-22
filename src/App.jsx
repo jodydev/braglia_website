@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import Catalog from "./pages/Catalog";
 import Contact from "./pages/Contact";
 import Company from "./pages/Company";
-import Comunications from "./pages/Comunications";
 
 const App = () => {
   return (
@@ -14,7 +13,6 @@ const App = () => {
       <Route path="/catalog" element={<Catalog />} />
       <Route path="/contacts" element={<Contact />} />
       <Route path="/company" element={<Company />} />
-      <Route path="/comunications" element={<Comunications />} />
     </Routes>
   );
 };

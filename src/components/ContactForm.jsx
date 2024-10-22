@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ToastContainer, toast } from "react-toastify";
+import Cube from "../assets/images/icons/cube.png";
+import Goccia from "../assets/images/icons/goccia.png";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "emailjs-com";
 
@@ -77,13 +79,13 @@ const ContactForm = () => {
     ).some((checked) => checked);
 
     if (!isAtLeastOneCompanyTypeChecked) {
-      toast.error(t("please select at least one company type")); // Messaggio di avviso
-      return; // Ferma l'invio del modulo
+      toast.error(t("please select at least one company type")); 
+      return;
     }
 
     if (!isAtLeastOneContactChecked) {
-      toast.error(t("please select at least one company contact")); // Messaggio di avviso
-      return; // Ferma l'invio del modulo
+      toast.error(t("please select at least one company contact")); 
+      return;
     }
 
     const emailParams = {
@@ -116,10 +118,10 @@ const ContactForm = () => {
     <section id="contact-form" className="flex-row h-100 w-screen p-10 xl:p-20">
       <ToastContainer
         style={{ position: "absolute", bottom: "-100%", right: "5%" }}
-        position="bottom-right" 
+        position="bottom-right"
         autoClose={3000}
         hideProgressBar={false}
-        newestOnTop={false} 
+        newestOnTop={false}
         closeOnClick
         rtl={false}
         pauseOnFocusLoss
@@ -127,6 +129,20 @@ const ContactForm = () => {
         pauseOnHover
       />
       <div className="flex flex-row justify-between h-100">
+        <div className="absolute lg:-left-20 lg:top-40 inset-0 -z-50">
+          <img
+            src={Cube}
+            alt="Background"
+            className="object-cover w-[250px] h-[250px] opacity-20"
+          />
+        </div>
+        <div className="absolute left-[67%] right-0 lg:top-60 inset-0 -z-50">
+          <img
+            src={Goccia}
+            alt="Background"
+            className="object-cover w-[400px] h-[400px] opacity-20"
+          />
+        </div>
         <div className="flex-col h-100">
           <h2 className="text-black lg:text-6xl xl:text-8xl italic w-full -z-50 mb-20">
             {t("contacts")}
@@ -137,7 +153,9 @@ const ContactForm = () => {
             className="flex flex-col items-start justify-center w-full max-w-2xl"
             onSubmit={handleSubmit}
           >
-            <label className="text-black lg:text-2xl xl:text-3xl mb-4">{t("company")}*</label>
+            <label className="text-black lg:text-2xl xl:text-3xl mb-4">
+              {t("company")}*
+            </label>
             <input
               type="text"
               name="name"
@@ -146,7 +164,9 @@ const ContactForm = () => {
               required
               className="w-full p-4 mb-4 border-2 border-black focus:border-black focus:ring-0"
             />
-            <label className="text-black lg:text-2xl xl:text-3xl mb-4">{t("mr/miss")}*</label>
+            <label className="text-black lg:text-2xl xl:text-3xl mb-4">
+              {t("mr/miss")}*
+            </label>
             <input
               type="text"
               name="surname"
@@ -156,7 +176,9 @@ const ContactForm = () => {
               className="w-full p-4 mb-4 border-2 border-black focus:border-black focus:ring-0"
             />
 
-            <label className="text-black lg:text-2xl xl:text-3xl mb-4">Email*</label>
+            <label className="text-black lg:text-2xl xl:text-3xl mb-4">
+              Email*
+            </label>
             <input
               type="email"
               name="email"
@@ -212,7 +234,10 @@ const ContactForm = () => {
               ))}
             </div>
 
-            <label className="text-black lg:text-2xl xl:text-3xl mb-4"> {t("object")}</label>
+            <label className="text-black lg:text-2xl xl:text-3xl mb-4">
+              {" "}
+              {t("object")}
+            </label>
             <textarea
               name="subject"
               value={formData.subject}
@@ -258,16 +283,22 @@ const ContactForm = () => {
             <h3 className="lg:text-3xl xl:text-4xl uppercase italic font-semibold">
               Braglia s.r.l
             </h3>
-            <p className="lg:text-xl xl:text-3xl">{t("street")} Martin Lutero, 4</p>
+            <p className="lg:text-xl xl:text-3xl">
+              {t("street")} Martin Lutero, 4
+            </p>
             <p className="lg:text-xl xl:text-3xl">42122</p>
             <p className="lg:text-xl xl:text-3xl">Reggio Emilia, Italy (UE)</p>
-            <p className="lg:text-xl xl:text-3xl uppercase">Vat no. 00443530357</p>
+            <p className="lg:text-xl xl:text-3xl uppercase">
+              Vat no. 00443530357
+            </p>
             <p className="lg:text-xl xl:text-3xl my-10">+39 0522 340648</p>
             <p className="lg:text-xl xl:text-3xl font-semibold">
               {t("general information")}:
             </p>
             <p className="lg:text-xl xl:text-3xl mb-10">info@braglia.it</p>
-            <p className="lg:text-xl xl:text-3xl font-semibold">{t("Orders")}</p>
+            <p className="lg:text-xl xl:text-3xl font-semibold">
+              {t("Orders")}
+            </p>
             <p className="lg:text-xl xl:text-3xl">orders@braglia.it</p>
           </div>
           <div className="sticky mt-40 flex-col space-y-5">
@@ -276,15 +307,10 @@ const ContactForm = () => {
                 {t("company")}
               </a>
             </div>
-            <div className="border-2 border-black text-center py-3 px-20 text-black hover:bg-gray-200 hover:cursor-pointer transition-all duration-1000 ease-in-out">
-              <a href="/comunications" className="uppercase text-2xl">
-                {t("comunications")}
-              </a>
-            </div>
-            <div className="border-2 border-black text-center py-3 px-20 text-black hover:bg-gray-200 hover:cursor-pointer transition-all duration-1000 ease-in-out">
-              <a href="/contacts" className="uppercase text-2xl">
+            <div className="border-2 border-black bg-black text-center py-3 px-20 text-white cursor-not-allowed transition-all duration-1000 ease-in-out">
+              <p className="uppercase text-2xl cursor-not-allowed">
                 {t("contacts")}
-              </a>
+              </p>
             </div>
           </div>
         </div>

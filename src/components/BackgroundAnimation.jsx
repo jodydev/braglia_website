@@ -91,43 +91,43 @@ const BackgroundAnimation = () => {
       <img
         src={One}
         alt="Icon 1"
-        className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px] lg:h-[200px] lg:w-[200px] xl:h-[250px] xl:w-[250px] 2xl:h-[300px] 2xl:w-[300px] text-primary absolute transition-all duration-1000 ease-in-out"
+        className="h-[100px] w-[100px] sm:h-[150px] sm:w-[100px] lg:h-[250px] lg:w-[200px] xl:h-[350px] xl:w-[300px] 2xl:h-[350px] 2xl:w-[300px] text-primary absolute transition-all duration-1000 ease-in-out"
         style={positions[0]}
       />
       <img
         src={Two}
         alt="Icon 2"
-        className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px] lg:h-[200px] lg:w-[200px] xl:h-[250px] xl:w-[250px] 2xl:h-[300px] 2xl:w-[300px] text-primary absolute transition-all duration-1000 ease-in-out"
+        className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px] lg:h-[250px] lg:w-[250px] xl:h-[350px] xl:w-[350px] 2xl:h-[350px] 2xl:w-[350px] text-primary absolute transition-all duration-1000 ease-in-out"
         style={positions[1]}
       />
       <img
         src={Three}
         alt="Icon 3"
-        className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px] lg:h-[200px] lg:w-[200px] xl:h-[250px] xl:w-[250px] 2xl:h-[300px] 2xl:w-[300px] text-primary absolute transition-all duration-1000 ease-in-out"
+        className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px] lg:h-[250px] lg:w-[250px] xl:h-[350px] xl:w-[350px] 2xl:h-[350px] 2xl:w-[350px] text-primary absolute transition-all duration-1000 ease-in-out"
         style={positions[2]}
       />
       <img
         src={Four}
         alt="Icon 4"
-        className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px] lg:h-[200px] lg:w-[200px] xl:h-[250px] xl:w-[250px] 2xl:h-[300px] 2xl:w-[300px] text-primary absolute transition-all duration-1000 ease-in-out"
+        className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px] lg:h-[250px] lg:w-[250px] xl:h-[350px] xl:w-[350px] 2xl:h-[350px] 2xl:w-[350px] text-primary absolute transition-all duration-1000 ease-in-out"
         style={positions[3]}
       />
       <img
         src={Five}
         alt="Icon 5"
-        className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px] lg:h-[200px] lg:w-[200px] xl:h-[250px] xl:w-[250px] 2xl:h-[300px] 2xl:w-[300px] text-primary absolute rotate-45 transition-all duration-1000 ease-in-out"
+        className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px] lg:h-[250px] lg:w-[250px] xl:h-[350px] xl:w-[350px] 2xl:h-[350px] 2xl:w-[350px] text-primary absolute rotate-60 transition-all duration-1000 ease-in-out"
         style={positions[4]}
       />
       <img
         src={Six}
         alt="Icon 6"
-        className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px] lg:h-[200px] lg:w-[200px] xl:h-[250px] xl:w-[250px] 2xl:h-[300px] 2xl:w-[300px] text-primary absolute transition-all duration-1000 ease-in-out"
+        className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px] lg:h-[250px] lg:w-[250px] xl:h-[350px] xl:w-[350px] 2xl:h-[350px] 2xl:w-[350px] text-primary absolute transition-all duration-1000 ease-in-out"
         style={positions[5]}
       />
       <img
         src={Seven}
         alt="Icon 7"
-        className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px] lg:h-[200px] lg:w-[200px] xl:h-[250px] xl:w-[250px] 2xl:h-[300px] 2xl:w-[300px] text-primary absolute transition-all duration-1000 ease-in-out"
+        className="h-[100px] w-[100px] sm:h-[50px] sm:w-[150px] lg:h-[150px] lg:w-[250px] xl:h-[250px] xl:w-[350px] 2xl:h-[250px] 2xl:w-[350px] text-primary absolute transition-all duration-1000 ease-in-out"
         style={positions[6]}
       />
     </div>

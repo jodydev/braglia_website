@@ -59,7 +59,7 @@ const Category = () => {
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="object-cover lg:ms-6 xl:ms-16 lg:w-[250px] lg:h-[250px] xl:w-[350px] xl:h-[350px] transition-transform duration-500 hover:scale-105"
+                  className=" drop-shadow-lg object-cover lg:ms-6 xl:ms-16 lg:w-[250px] lg:h-[250px] xl:w-[350px] xl:h-[350px] transition-transform duration-500 hover:scale-105"
                 />
               </div>
               <h3 className="title-animation text-xl md:text-2xl xl:text-3xl uppercase text-center lg:mt-4 xl:mt-10 flex items-center justify-center">

@@ -36,7 +36,7 @@ const Contents = ({ isCompanyPage }) => {
                 />
               </div>
               <div className="md:w-1/2 p-5">
-                <h3 className="title-animation text-6xl 2xl:text-8xl font-bold mb-4">
+                <h3 className="title-animation text-6xl 2xl:text-8xl font-medium mb-4">
                   {content.title}
                 </h3>
                 <p className="italic mt-10 2xl:text-2xl">{content.text}</p>
@@ -58,7 +58,7 @@ const Contents = ({ isCompanyPage }) => {
                 />
               </div>
               <div className="md:w-1/2 p-5">
-                <h3 className="title-animation text-6xl 2xl:text-8xl font-bold mb-4">
+                <h3 className="title-animation text-6xl 2xl:text-8xl font-medium mb-4">
                   {content.title}
                 </h3>
                 <p className="italic mt-10 2xl:text-2xl">{content.text}</p>
