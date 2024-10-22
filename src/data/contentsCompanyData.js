@@ -1,33 +1,33 @@
 
-const contentsData = [
+const contentsCompanyData = [
   {
     id: 1,
-    title: "innovation and technology",
+    title: "braglia explanatory",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec, fermentum nunc, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec, fermentum nunctincidunt nunc nec, fermentum nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec, fermentum nunc, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec, fermentum nunctincidunt nunc nec, fermentum nunc.",
     image:
-      "https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://picsum.photos/400/300",
   },
   {
     id: 2,
-    title: "quality and safety",
+    title: "nehro at work",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec, fermentum nunc, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec, fermentum nunctincidunt nunc nec, fermentum nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec, fermentum nunc, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec, fermentum nunctincidunt nunc nec, fermentum nunc.",
     image:
-      "https://images.pexels.com/photos/3184434/pexels-photo-3184434.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "https://picsum.photos/400/300",
   },
   {
     id: 3,
-    title: "organisation and resources",
+    title: "simulator SSC SONIC",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec, fermentum nunc, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec, fermentum nunctincidunt nunc nec, fermentum nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec, fermentum nunc, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec, fermentum nunctincidunt nunc nec, fermentum nunc.",
     image:
-      "https://images.pexels.com/photos/7078666/pexels-photo-7078666.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "https://picsum.photos/400/300",
   },
   {
     id: 4,
-    title: "creativity, research and development",
+    title: "Smarts pray",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec, fermentum nunc, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec, fermentum nunctincidunt nunc nec, fermentum nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec, fermentum nunc, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec, fermentum nunctincidunt nunc nec, fermentum nunc.",
     image:
-      "https://images.pexels.com/photos/3182761/pexels-photo-3182761.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "https://picsum.photos/400/300",
   },
 ];
 
-export { contentsData };
+export { contentsCompanyData };

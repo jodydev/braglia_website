@@ -98,7 +98,7 @@ const BackgroundAnimation = () => {
         style={positions[1]}
       />
       <RiEqualFill
-        className="h-[150px] w-[150px] lg:h-[250px] lg:w-[250px] xl:w-[350px] xl:h-[350px] 2xl:h-[600px] 2xl:w-[600px] text-primary absolute transition-all duration-1000 ease-in-out"
+        className="h-[150px] w-[150px] lg:h-[350px] lg:w-[350px] 2xl:h-[600px] 2xl:w-[600px] text-primary absolute transition-all duration-1000 ease-in-out"
         style={positions[2]}
       />
       <FaCircle
@@ -106,11 +106,11 @@ const BackgroundAnimation = () => {
         style={positions[3]}
       />
       <FaSquareFull
-        className="h-[150px] w-[150px] lg:h-[250px] lg:w-[250px] xl:w-[350px] xl:h-[350px] 2xl:h-[400px] 2xl:w-[400px] text-primary absolute rotate-45 transition-all duration-1000 ease-in-out"
+        className="h-[150px] w-[150px] lg:h-[200px] lg:w-[200px] xl:w-[350px] xl:h-[350px] 2xl:h-[400px] 2xl:w-[400px] text-primary absolute rotate-45 transition-all duration-1000 ease-in-out"
         style={positions[4]}
       />
       <TbMedicalCrossFilled
-        className="h-[150px] w-[150px] lg:h-[250px] lg:w-[250px] xl:w-[350px] xl:h-[350px] 2xl:h-[600px] 2xl:w-[600px] text-primary absolute transition-all duration-1000 ease-in-out"
+        className="h-[150px] w-[150px] lg:h-[300px] lg:w-[300px] 2xl:h-[600px] 2xl:w-[600px] text-primary absolute transition-all duration-1000 ease-in-out"
         style={positions[5]}
       />
       <FaCircle

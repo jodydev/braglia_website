@@ -1,27 +1,106 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
 
 const resources = {
   en: {
     translation: {
-      "welcome": "Welcome to React and react-i18next"
-    }
+      catalog: "Catalog",
+      en: "En",
+      it: "It",
+      "Fluid sparaing and engineering": "Fluid sparaing and engineering",
+      contacts: "Contacts",
+      company: "Company",
+      contacts: "Contacts",
+      categories: "Categories",
+      "water lances": "Water lances",
+      "water jets": "Water jets",
+      nozzles: "Nozzles",
+      masots: "Masots",
+      "innovation and technology": "Innovation and technology",
+      "quality and safety": "Quality and safety",
+      "organisation and resources": "Organisation and resources",
+      "creativity, research and development":
+        "Creativity, research and development",
+      "braglia explanatory": "Braglia explanatory",
+      "nehro at work": "Nehro at work",
+      "simulator SSC SONIC": "Simulator SSC SONIC",
+      "smarts pray": "Smarts pray",
+      "company profile": "Company Profile",
+      "company content":
+        "Production of spraying and weed control accessories. The company was founded in the 1950s when the Braglia family decided to use its experience and entrepreneurial vocation to produce agricultural spraying accessories and is now in its third generation. Production is appreciated for its recognised quality and value for money. The company also exports to 60 countries today.",
+      "mr/miss": "Mr/Miss",
+      "company type": "Company type",
+      manufacturer: "Manufacturer",
+      "distribution company": "Distribution company",
+      retailer: "Retailer",
+      othes: "Others",
+      "company contacts": "Company Contacts",
+      "sales italy": "Sales Italy",
+      "export department": "Export Department",
+      object: "Object",
+      "privacy policy":
+        "The undersigned acknowledges receipt of the information pursuant to art. 13 of Legislative Decree 196/2003 and art. 13 of EU Regulation 2016/679 and consents to the processing of their personal data for the purposes indicated and to be communicated to the subjects and for the purposes declared in the information.",
+      accept: "I accept",
+      send: "Send",
+      street: "street",
+      "general information": "General Information",
+      orders: "Orders",
+      "share capital": "Share Capital",
+    },
   },
   it: {
     translation: {
-      "welcome": "Benvenuto in React e react-i18next"
-    }
-  }
+      catalog: "Catalogo",
+      en: "En",
+      it: "It",
+      "Fluid sparaing and engineering": "Ingegneria dei fluidi",
+      contacts: "Contatti",
+      company: "Azienda",
+      contacts: "Contatti",
+      categories: "Categorie",
+      "water lances": "Lancie",
+      "water jets": "Getti",
+      nozzles: "Ugelli",
+      masots: "Masotti",
+      "innovation and technology": "Innovazione e tecnologia",
+      "quality and safety": "Qualità e sicurezza",
+      "organisation and resources": "Organizzazione e risorse",
+      "creativity, research and development": "Creatività, ricerca e sviluppo",
+      "braglia explanatory": "Spiegazione Braglia",
+      "nehro at work": "Nehro al lavoro",
+      "simulator SSC SONIC": "Simulatore SSC SONIC",
+      "smarts pray": "Smarts pray",
+      "company profile": "Profilo aziendale",
+      "company content":
+        "Produzione accessori per irrorazione e diserbo. L'azienda è stata fondata negli anni '50 quando la famiglia Braglia decise di struttare la propria esperienza e vocazione imprenditoriale per produrre accessori per irrorazione in agricoltura ed è ormai giunta alla terza generazione. La produzione è apprezzata per la riconosciuta qualità e per il rapporto qualità/prezzo. L'azienda esporta oggi inoltre 60 paese.",
+      "mr/miss": "Sig./Sig.ra",
+      "company type": "Tipo di azienda",
+      manufacturer: "Costruttore",
+      "distribution company": "Azienda di distribuzione",
+      retailer: "Rivenditore",
+      othes: "Altro",
+      "company contacts": "Contatti Aziendali",
+      "sales italy": "Commerciale Italia",
+      "export department": "Dipartimento Esportazioni",
+      object: "Oggetto",
+      "privacy policy":
+        "Il sottoscritto prende dell’informativa ai sensi dell’art. 13 del D.Lgs. 196/2003 e dell’art. 13 del Regolamento UE 2016/679 e acconsente al trattamento dei propri dati personali possano essere trattati per gli scopi indicati ed essere oggetto di comunicazione ai soggetti e per le finalità dichiarate.",
+      accept: "Acconsento",
+      send: "Invia",
+      street: "via",
+      "general information": "Informazioni Generali",
+      orders: "Ordini",
+      "share capital": "Capitale Sociale",
+    },
+  },
 };
 
-i18n
-  .use(initReactI18next)
-  .init({
-    resources,
-    lng: "en",
-    interpolation: {
-      escapeValue: false
-    }
-  });
+i18n.use(initReactI18next).init({
+  resources,
+  lng: "en",
+  interpolation: {
+    escapeValue: false,
+  },
+});
 
 export default i18n;

@@ -1,6 +1,9 @@
+import { useTranslation } from "react-i18next";
 import Logo from "../assets/images/logo.png";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-primary flex flex-row text-white py-8 px-4">
       <div className="mx-10 flex flex-col items-start justify-start w-full">
@@ -27,7 +30,7 @@ const Footer = () => {
         <div className="mt-4 w-full h-[1px] bg-white"></div>
         <div className="text-center">
           <p className="text-sm my-2">
-            C.F./P.Iva/Reg.Imp. RE/VAT NO. 00443530357 • Capitale sociale €
+            C.F./P.Iva/Reg.Imp. RE/VAT NO. 00443530357 • {t("share capital")} €
             98.000.00 i.v.
           </p>
         </div>

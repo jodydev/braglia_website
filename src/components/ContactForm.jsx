@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import emailjs from "emailjs-com";
 
 const ContactForm = () => {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: "",
     surname: "",
@@ -86,12 +89,11 @@ const ContactForm = () => {
   };
 
   return (
-    <section
-      id="contact-form"
-      className="flex-row h-100 w-screen md:p-20"
-    >
+    <section id="contact-form" className="flex-row h-100 w-screen md:p-20">
       <div className="flex-col">
-        <h2 className="text-black md:text-6xl xl:text-8xl italic w-full -z-50 mb-20">Contatti</h2>
+        <h2 className="text-black md:text-6xl xl:text-8xl italic w-full -z-50 mb-20">
+          {t("contacts")}
+        </h2>
       </div>
       <div className="flex flex-row justify-between">
         <div className="flex justify-center items-center w-2/3">
@@ -99,7 +101,7 @@ const ContactForm = () => {
             className="flex flex-col items-start justify-center w-full max-w-2xl"
             onSubmit={handleSubmit}
           >
-            <label className="text-black text-2xl mb-4">Azienda*</label>
+            <label className="text-black text-2xl mb-4">{t("company")}*</label>
             <input
               type="text"
               name="name"
@@ -108,7 +110,7 @@ const ContactForm = () => {
               required
               className="w-full p-4 mb-4 border-2 border-black focus:border-black focus:ring-0"
             />
-            <label className="text-black text-2xl mb-4">Sig*</label>
+            <label className="text-black text-2xl mb-4">{t("mr/miss")}*</label>
             <input
               type="text"
               name="surname"
@@ -131,7 +133,7 @@ const ContactForm = () => {
             <div className="mb-4">
               <div className="flex flex-col">
                 <label className="text-black text-2xl mb-4">
-                  Tipo Azienda*
+                  {t("company type")}*
                 </label>
 
                 <label className="flex items-center text-xl mb-4">
@@ -142,7 +144,7 @@ const ContactForm = () => {
                     onChange={handleChange}
                     className="hover:cursor-pointer mr-2 w-6 h-6 border-2 border-black rounded-none focus:ring-0 checked:bg-black"
                   />
-                  Costruttore
+                  {t("manufacturer")}
                 </label>
                 <label className="flex items-center text-xl mb-4">
                   <input
@@ -152,7 +154,7 @@ const ContactForm = () => {
                     onChange={handleChange}
                     className="hover:cursor-pointer mr-2 w-6 h-6 border-2 border-black rounded-none focus:ring-0 checked:bg-black"
                   />
-                  Azienda di distribuzione
+                  {t("distribution company")}
                 </label>
                 <label className="flex items-center text-xl mb-4">
                   <input
@@ -162,7 +164,7 @@ const ContactForm = () => {
                     onChange={handleChange}
                     className="hover:cursor-pointer mr-2 w-6 h-6 border-2 border-black rounded-none focus:ring-0 checked:bg-black"
                   />
-                  Rivenditore
+                  {t("retailer")}
                 </label>
                 <label className="flex items-center text-xl mb-4">
                   <input
@@ -182,14 +184,14 @@ const ContactForm = () => {
                     onChange={handleChange}
                     className="hover:cursor-pointer mr-2 w-6 h-6 border-2 border-black rounded-none focus:ring-0 checked:bg-black"
                   />
-                  Altro
+                  {t("othes")}
                 </label>
               </div>
             </div>
 
             <div className="flex flex-col">
               <label className="text-black text-2xl mb-4">
-                Contatti Aziendali*
+                {t("company contacts")}*
               </label>
 
               <label className="flex items-center text-xl mb-4">
@@ -200,7 +202,7 @@ const ContactForm = () => {
                   onChange={handleChange}
                   className="hover:cursor-pointer mr-2 w-6 h-6 border-2 border-black rounded-none focus:ring-0 checked:bg-black"
                 />
-                Commerciale Italia
+                {t("sales italy")}*
               </label>
               <label className="flex items-center text-xl mb-4">
                 <input
@@ -210,11 +212,11 @@ const ContactForm = () => {
                   onChange={handleChange}
                   className="hover:cursor-pointer mr-2 w-6 h-6 border-2 border-black rounded-none focus:ring-0 checked:bg-black"
                 />
-                Export Department
+                {t("export department")}
               </label>
             </div>
 
-            <label className="text-black text-2xl mb-4">Oggetto</label>
+            <label className="text-black text-2xl mb-4"> {t("object")}</label>
             <textarea
               name="subject"
               value={formData.subject}
@@ -227,11 +229,7 @@ const ContactForm = () => {
                 Privacy*
               </h3>
               <p className="text-black text-lg font-normal mb-4">
-                Il sottoscritto prende dell’informativa ai sensi dell’art. 13
-                del D.Lgs. 196/2003 e dell’art. 13 del Regolamento UE 2016/679 e
-                acconsente al trattamento dei propri dati personali possano
-                essere trattati per gli scopi indicati ed essere oggetto di
-                comunicazione ai soggetti e per le finalità dichiarate.
+                {t("privacy policy")}
               </p>
               <label className="flex items-center text-xl mb-4">
                 <input
@@ -241,7 +239,7 @@ const ContactForm = () => {
                   onChange={handleChange}
                   className="mr-2 w-6 h-6 border-2 border-black rounded-none focus:ring-0 checked:bg-black"
                 />
-                Acconsento
+                {t("accept")}
               </label>
             </div>
 
@@ -251,7 +249,7 @@ const ContactForm = () => {
                 className="flex flex-row border-2 border-black text-center py-3 px-10 hover:cursor-pointer transition-all duration-1000 ease-in-out"
               >
                 <span className="uppercase text-2xl flex items-center">
-                  Invia
+                  {t("send")}
                 </span>
               </button>
             </div>
@@ -262,30 +260,32 @@ const ContactForm = () => {
             <h3 className="text-4xl uppercase italic font-semibold">
               Braglia s.r.l
             </h3>
-            <p className="text-3xl">via Martin Lutero, 4</p>
+            <p className="text-3xl">{t("street")} Martin Lutero, 4</p>
             <p className="text-3xl">42122</p>
             <p className="text-3xl">Reggio Emilia, Italy (UE)</p>
             <p className="text-3xl uppercase">Vat no. 00443530357</p>
             <p className="text-3xl my-10">+39 0522 340648</p>
-            <p className="text-3xl font-semibold">Informazioni generali:</p>
+            <p className="text-3xl font-semibold">
+              {t("general information")}:
+            </p>
             <p className="text-3xl mb-10">info@braglia.it</p>
-            <p className="text-3xl font-semibold">Ordini</p>
+            <p className="text-3xl font-semibold">{t("Orders")}</p>
             <p className="text-3xl">orders@braglia.it</p>
           </div>
           <div className="sticky mt-40 flex-col space-y-5">
             <div className="border-2 border-black text-center py-3 px-20 text-black hover:bg-gray-200 hover:cursor-pointer transition-all duration-1000 ease-in-out">
               <a href="/company" className="uppercase text-2xl">
-                Azienda
+                {t("company")}
               </a>
             </div>
             <div className="border-2 border-black text-center py-3 px-20 text-black hover:bg-gray-200 hover:cursor-pointer transition-all duration-1000 ease-in-out">
               <a href="/comunications" className="uppercase text-2xl">
-                Comunicazione
+                {t("comunications")}
               </a>
             </div>
             <div className="border-2 border-black text-center py-3 px-20 text-black hover:bg-gray-200 hover:cursor-pointer transition-all duration-1000 ease-in-out">
               <a href="/contacts" className="uppercase text-2xl">
-                Contatti
+                {t("contacts")}
               </a>
             </div>
           </div>

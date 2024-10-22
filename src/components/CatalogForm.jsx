@@ -24,19 +24,19 @@ const CatalogForm = () => {
 
   return (
     <section id="catalog" className="flex-row h-100 w-screen md:p-20">
-      <div className="flex-col">
-        <h2 className="text-black md:text-6xl xl:text-8xl italic w-full -z-50 mb-10">
-          Cataloghi
-        </h2>
-        <p className="text-black text-4xl ms-3">
-          Catalogo Completo
-          <RiDownloadLine
-            onClick={() => downloadCatalog(category.fileName)}
-            className="ms-3 inline-block text-4xl cursor-pointer"
-          />
-        </p>
-      </div>
-      <div className="flex flex-row justify-between mt-20 xl:mt-0">
+      <div className="flex flex-row justify-between gap-32">
+        <div className="flex-col">
+          <h2 className="text-black md:text-6xl xl:text-8xl italic w-full -z-50 mb-10">
+            Cataloghi
+          </h2>
+          <p className="text-black text-4xl ms-3">
+            Catalogo Completo
+            <RiDownloadLine
+              onClick={() => downloadCatalog(category.fileName)}
+              className="ms-3 inline-block text-4xl cursor-pointer"
+            />
+          </p>
+        </div>
         <div className="flex justify-end items-start w-2/3">
           <div className="flex flex-col w-full max-w-2xl">
             {categories.map((category, index) => (
