@@ -23,7 +23,7 @@ const Header = ({ isContactPage, isCatalogPage }) => {
         <img
           src={Logo}
           alt="Logo"
-          className={`h-24 w-60 ${
+          className={`h-16 w-40 lg:h-24 lg:w-60 ${
             isContactPage || isCatalogPage ? "filter invert" : ""
           }`}
         />
@@ -41,7 +41,7 @@ const Header = ({ isContactPage, isCatalogPage }) => {
               ? "border-black text-black hover:bg-black hover:text-white cursor-pointer"
               : "border-white text-white hover:bg-white hover:text-black cursor-pointer"
           } 
-          flex flex-row border-2 text-center py-3 px-5 transition-all duration-1000 ease-in-out`}
+         hidden lg:flex lg:flex-row border-2 text-center py-3 px-5 transition-all duration-1000 ease-in-out`}
         >
           <a
             href={isCatalogPage ? undefined : "/catalog"}
@@ -54,7 +54,7 @@ const Header = ({ isContactPage, isCatalogPage }) => {
         </div>
         <div className="flex space-x-5">
           <div
-            className={`border-2 rounded-full text-center py-3 md:py-4 md:px-5 xl:px-5 xl:py-4 ${
+            className={`border-2 rounded-full text-center px-4 py-3 lg:py-4 lg:px-5 xl:px-5 xl:py-4 ${
               activeLanguage === "it"
                 ? "bg-black text-white border-black"
                 : activeLanguage && isCatalogPage
@@ -65,14 +65,14 @@ const Header = ({ isContactPage, isCatalogPage }) => {
             } hover:cursor-pointer transition-all duration-1000 ease-in-out`}
           >
             <button
-              className="text-2xl uppercase"
+              className="text-lg lg:text-2xl uppercase"
               onClick={() => changeLanguage("it")}
             >
               {t("it")}
             </button>
           </div>
           <div
-            className={`border-2 rounded-full text-center p-4 ${
+            className={`border-2 rounded-full text-center p-3 lg:p-4 ${
               activeLanguage === "en"
                 ? "bg-black text-white border-black"
                 : activeLanguage && isCatalogPage
@@ -83,7 +83,7 @@ const Header = ({ isContactPage, isCatalogPage }) => {
             } hover:cursor-pointer transition-all duration-1000 ease-in-out`}
           >
             <button
-              className="uppercase text-2xl"
+              className="uppercase text-lg lg:text-2xl"
               onClick={() => changeLanguage("en")}
             >
               {t("en")}

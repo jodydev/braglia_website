@@ -6,31 +6,31 @@ const CompanyContent = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="contact-form" className="flex-row h-100 w-screen md:p-20">
-      <div className="flex flex-row justify-between">
-        <div className="flex-col">
-          <h2 className="text-black md:text-6xl lg:text-7xl xl:text-8xl w-full -z-50 mb-5">
+    <section id="contact-form" className="flex flex-col h-auto w-full p-10 lg:p-10">
+      <div className="flex flex-col md:flex-row justify-between">
+        <div className="flex flex-col items-start mb-5 md:mb-0">
+          <h2 className="text-black text-4xl md:text-6xl lg:text-7xl xl:text-8xl w-full mb-5 -z-50">
             Braglia <br /> {t("company")}
           </h2>
-          <p className="text-black md:text-4xl xl:text-6xl w-full flex items-center">
-          {t("company profile")} <BsArrowDown className="ml-2" />
+          <p className="text-black text-2xl md:text-4xl xl:text-6xl flex items-center">
+            {t("company profile")} <BsArrowDown className="ml-2" />
           </p>
         </div>
-        <div className="flex justify-center items-start w-1/3">
-          <p className="text-2xl">
-           {t("company content")}
+        <div className="flex justify-center items-start w-full md:w-1/3 mb-5 md:mb-0">
+          <p className="text-lg lg:text-2xl xl:text-3xl">
+            {t("company content")}
           </p>
         </div>
-        <div className="flex flex-col items-center w-1/3 ">
+        <div className="flex justify-center items-center w-full md:w-1/3 mt-5 lg:mt-0">
           <img
             src="https://picsum.photos/400/600"
             alt=""
-            className="shadow-lg"
+            className="shadow-lg w-full h-auto max-w-xs md:max-w-sm"
           />
         </div>
       </div>
 
-      <div className="my-20">
+      <div className="my-10 lg:my-20">
         <Contents isCompanyPage={true} />
       </div>
     </section>

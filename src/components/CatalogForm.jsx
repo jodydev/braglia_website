@@ -31,8 +31,8 @@ const CatalogForm = () => {
   };
 
   return (
-    <section id="catalog" className="flex-row h-screen w-screen md:p-10">
-      <div className="h-screen w-screen absolute inset-0 -z-50">
+    <section id="catalog" className="flex flex-col h-auto lg:h-screen w-full relative px-0 py-10 lg:p-10">
+      <div className="hidden lg:flex absolute inset-0 -z-50">
         <img
           src={Four}
           alt="Icon"
@@ -64,34 +64,34 @@ const CatalogForm = () => {
           className="absolute lg:top-[50%] lg:right-0 object-cover w-[200px] h-[200px] opacity-20"
         />
       </div>
-      <div className="flex flex-row justify-between gap-32">
-        <div className="flex-col">
-          <h2 className="text-black md:text-6xl xl:text-8xl italic w-full -z-50 mb-10">
+      <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-32">
+        <div className="flex-col items-start text-start lg:text-center md:text-left p-5 lg:p-0">
+          <h2 className="text-black text-4xl md:text-6xl xl:text-8xl italic mb-5">
             Cataloghi
           </h2>
-          <p className="text-black text-nowrap lg:text-3xl xl:text-4xl ms-3">
+          <p className="text-black text-nowrap text-2xl md:text-3xl xl:text-4xl flex items-center justify-start lg:justify-center">
             Catalogo Completo
             <RiDownloadLine
-              onClick={() => downloadCatalog(category.fileName)}
+              onClick={() => downloadCatalog("catalogo-completo.pdf")} 
               className="ms-3 inline-block text-4xl cursor-pointer"
             />
           </p>
         </div>
-        <div className="flex justify-end items-start w-2/3">
+        <div className="flex justify-end items-start w-full md:w-2/3 px-5 lg:px-0">
           <div className="flex flex-col w-full max-w-2xl">
             {categories.map((category, index) => (
               <div
                 key={index}
-                className="flex flex-row w-full border-b-2 border-black mb-3 py-5"
+                className="flex flex-row justify-between w-full border-b-2 border-black mb-3 py-5"
               >
                 <div className="flex flex-col w-1/2 justify-start items-start">
-                  <p className="text-black lg:text-3xl xl:text-5xl">
+                  <p className="text-black text-2xl md:text-3xl xl:text-5xl">
                     {category.name}
                   </p>
                 </div>
                 <div className="flex flex-col w-1/2 justify-end items-end">
                   <RiDownloadLine
-                    onClick={category.downloadFunction}
+                    onClick={() => downloadCatalog(category.fileName)}
                     className="ms-3 inline-block text-4xl cursor-pointer"
                   />
                 </div>
@@ -99,18 +99,15 @@ const CatalogForm = () => {
             ))}
           </div>
         </div>
-        <div className="flex flex-col items-center w-1/3 ">
-          <div className="absolute bottom-72 flex-col space-y-5">
-            <div className="border-2 border-black text-center py-3 px-20 text-black hover:bg-gray-200 hover:cursor-pointer transition-all duration-1000 ease-in-out">
-              <a href="/company" className="uppercase text-2xl">
+        <div className="hidden lg:flex flex-col items-center w-full md:w-1/3">
+          <div className="absolute bottom-10 flex flex-col space-y-5">
+            <div className="border-2 border-black text-center py-3 px-5 md:px-20 text-black hover:bg-gray-200 hover:cursor-pointer transition-all duration-300 ease-in-out">
+              <a href="/company" className="uppercase text-lg md:text-2xl">
                 {t("company")}
               </a>
             </div>
-            <div className="border-2 border-black text-center py-3 px-20 text-black hover:bg-gray-200 hover:cursor-pointer transition-all duration-1000 ease-in-out">
-              <a
-                href="/contacts"
-                className="uppercase text-2xl"
-              >
+            <div className="border-2 border-black text-center py-3 px-5 md:px-20 text-black hover:bg-gray-200 hover:cursor-pointer transition-all duration-300 ease-in-out">
+              <a href="/contacts" className="uppercase text-lg md:text-2xl">
                 {t("contacts")}
               </a>
             </div>
