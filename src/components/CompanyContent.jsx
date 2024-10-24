@@ -9,7 +9,7 @@ const CompanyContent = () => {
     <section id="contact-form" className="flex flex-col h-auto w-full p-10 lg:p-10">
       <div className="flex flex-col md:flex-row justify-between">
         <div className="flex flex-col items-start mb-5 md:mb-0">
-          <h2 className="text-black text-4xl md:text-6xl lg:text-7xl xl:text-8xl w-full mb-5 -z-50">
+          <h2 className="text-black text-4xl md:text-6xl lg:text-7xl xl:text-8xl w-full mb-5">
             Braglia <br /> {t("company")}
           </h2>
           <p className="text-black text-2xl md:text-4xl xl:text-6xl flex items-center">

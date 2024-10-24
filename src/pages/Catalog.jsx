@@ -4,6 +4,7 @@ import CatalogForm from "../components/CatalogForm";
 import Footer from "../components/Footer";
 
 const Catalog = () => {
+  const isMobile = window.innerWidth < 768;
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
@@ -13,7 +14,7 @@ const Catalog = () => {
   return (
     <div
       id="catalog"
-      className={`h-full w-full bg-white ${animate ? 'slide-in' : ''}`}
+      className={`h-full w-full bg-white ${animate && !isMobile ? 'slide-in' : ''}`}
     >
       <Header isCatalogPage={true} />
       <CatalogForm />

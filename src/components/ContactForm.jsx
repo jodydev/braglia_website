@@ -131,7 +131,7 @@ const ContactForm = () => {
         draggable
         pauseOnHover
       />
-      <div className="flex flex-col md:flex-row justify-between h-auto w-full">
+      <div className="z-50 flex flex-col md:flex-row justify-between h-auto w-full">
         <div className="absolute top-[10%] left-[-10%] lg:-left-20 lg:top-40 inset-0 -z-50">
           <img
             src={Cube}

@@ -38,16 +38,6 @@ const getInitialPositions = () => {
       { top: "-190px", left: "800px" },
       { top: "190px", left: "720px" },
     ];
-  } else if (window.innerWidth >= 640) {
-    return [
-      { top: "30px", left: "-40px" },
-      { top: "auto", bottom: "8px", left: "80px" },
-      { top: "auto", bottom: "-8px", left: "200px" },
-      { top: "auto", bottom: "8px", left: "300px" },
-      { top: "-50px", left: "120px" },
-      { top: "-90px", left: "240px" },
-      { top: "70px", left: "180px" },
-    ];
   } else {
     return [
       { top: "10px", left: "-20px" },
@@ -78,7 +68,7 @@ const BackgroundAnimation = () => {
         newPositions.push(firstPosition);
         return newPositions;
       });
-    }, 2000);
+    }, 1500);
 
     return () => {
       clearInterval(interval);
@@ -87,7 +77,7 @@ const BackgroundAnimation = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-3 gap-4 text-secondary opacity-100 z-0">
+    <div className="hidden md:absolute inset-0 md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-3 gap-4 text-secondary opacity-100 z-0">
       <img
         src={One}
         alt="Icon 1"

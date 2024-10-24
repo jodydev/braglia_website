@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Animations from "../animations/Animations";
 
 const Home = () => {
+  const isMobile = window.innerWidth < 768;
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
@@ -13,7 +14,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section id="home" className={` ${animate ? "slide-in" : ""}`}>
+    <section id="home" className={` ${animate && !isMobile ? "slide-in" : ""}`}>
       <Hero />
       <Category />
       <Contents />
