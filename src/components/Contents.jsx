@@ -39,9 +39,9 @@ const Contents = ({ isCompanyPage }) => {
                 <h3 className="title-animation text-3xl sm:text-4xl md:text-5xl 2xl:text-8xl font-medium mb-2 sm:mb-4">
                   {content.title}
                 </h3>
-                <p className="italic mt-6 sm:mt-8 md:mt-10 text-base sm:text-lg 2xl:text-2xl">
+                {/* <p className="italic mt-6 sm:mt-8 md:mt-10 text-base sm:text-lg 2xl:text-2xl">
                   {content.text}
-                </p>
+                </p> */}
               </div>
             </div>
           ))
@@ -56,16 +56,16 @@ const Contents = ({ isCompanyPage }) => {
                 <img
                   src={content.image}
                   alt={content.title}
-                  className="w-full h-full hover:scale-105 transition-all duration-500 ease-in-out shadow-lg"
+                  className="w-full md:w-2/3 h-auto hover:scale-105 transition-all duration-500 ease-in-out shadow-lg"
                 />
               </div>
               <div className="w-full md:w-1/2 p-2 sm:p-5">
-                <h3 className="title-animation text-3xl lg:text-5xl 2xl:text-8xl font-medium mb-2 sm:mb-4">
+                <h3 className="title-animation text-3xl lg:text-8xl 2xl:text-9xl font-medium mb-2 sm:mb-4">
                   {content.title}
                 </h3>
-                <p className="italic mt-6 sm:mt-8 md:mt-10 text-base lg:text-base 2xl:text-2xl">
+                {/* <p className="italic mt-6 sm:mt-8 md:mt-10 text-base lg:text-base 2xl:text-2xl">
                   {content.text}
-                </p>
+                </p> */}
               </div>
             </div>
           ))}

@@ -44,6 +44,8 @@ const resources = {
       "share capital": "Share Capital",
       "please select at least one company type": "Please select at least one company type",
       "please select at least one company contact": "Please select at least one company contact",
+      "commands": "Commands",
+      "inovel": "Inovel",
     },
   },
   it: {
@@ -55,7 +57,7 @@ const resources = {
       contacts: "Contatti",
       company: "Azienda",
       categories: "Categorie",
-      "water lances": "Lancie",
+      "water lances": "Lance",
       "water jets": "Getti",
       nozzles: "Ugelli",
       masots: "Masotti",
@@ -88,6 +90,8 @@ const resources = {
       "share capital": "Capitale Sociale",
       "please select at least one company type": "Seleziona almeno un tipo di azienda",
       "please select at least one company contact": "Seleziona almeno un contatto aziendale",
+      "commands": "Comandi",
+      "inovel": "Inovel",
     },
   },
 };

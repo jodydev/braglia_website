@@ -1,32 +1,33 @@
+import One from "../assets/images/contents/1.jpg";
+import Two from "../assets/images/contents/2.jpg";
+import Three from "../assets/images/contents/3.jpg";
+import Four from "../assets/images/contents/4.jpg";
+
 
 const contentsData = [
   {
     id: 1,
     title: "innovation and technology",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec, fermentum nunc, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec, ",
-    image:
-      "https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: One,
   },
   {
     id: 2,
     title: "quality and safety",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec, fermentum nunc, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec, ",
-    image:
-      "https://images.pexels.com/photos/3184434/pexels-photo-3184434.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: Two,
   },
   {
     id: 3,
     title: "organisation and resources",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec, fermentum nunc, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec,",
-    image:
-      "https://images.pexels.com/photos/7078666/pexels-photo-7078666.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: Three,
   },
   {
     id: 4,
     title: "creativity, research and development",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec, fermentum nunc, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec pur us sodales, tincidunt nunc nec",
-    image:
-      "https://images.pexels.com/photos/3182761/pexels-photo-3182761.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: Four,
   },
 ];
 

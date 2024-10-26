@@ -12,7 +12,7 @@ const CatalogForm = () => {
   const catalogBaseUrl = "path/to/catalogs/";
 
   const categories = [
-    { name: "Lancie", fileName: "catalogo-lancie.pdf" },
+    { name: "Lance", fileName: "catalogo-lance.pdf" },
     { name: "Getti", fileName: "catalogo-getti.pdf" },
     { name: "Ugelli", fileName: "catalogo-ugelli.pdf" },
     { name: "Comandi", fileName: "catalogo-comandi.pdf" },

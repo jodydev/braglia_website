@@ -28,12 +28,12 @@ const categoriesData = [
   },
   {
     id: 5,
-    key: "water lances",
+    key: "commands",
     image: Comandi,
   },
   {
     id: 6,
-    key: "water jets",
+    key: "inovel",
     image: Inovel,
   },
 ];
