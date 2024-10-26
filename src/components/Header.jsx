@@ -9,7 +9,6 @@ const Header = ({ isContactPage, isCatalogPage }) => {
   const [activeLanguage, setActiveLanguage] = useState(i18n.language);
 
   const changeLanguage = (lng) => {
-    console.log(lng);
     i18n.changeLanguage(lng);
     setActiveLanguage(lng);
   };
