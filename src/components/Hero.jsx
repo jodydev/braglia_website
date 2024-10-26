@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { RiArrowDownWideFill } from "react-icons/ri";
 import { FaPlus } from "react-icons/fa";
 import Header from "./Header";
@@ -30,33 +31,31 @@ const Hero = () => {
         <div className="flex flex-col space-y-3 md:space-y-5 xl:space-y-8 w-full px-4 md:px-0">
           {/* Catalog button */}
           <div className="lg:hidden flex flex-row border-2 border-white text-center py-2 md:py-3 px-4 md:px-10 lg:px-20 text-white hover:bg-white hover:text-primary cursor-pointer transition-all duration-700 ease-in-out">
-            <a
-              href="/catalog"
+            <Link to="/catalog"
+              
               className="uppercase text-sm md:text-xl lg:text-2xl flex items-center w-full justify-center  ml-4 md:ml-8"
             >
               {t("catalog")}
               <FaPlus className="text-base md:text-xl ml-2 md:ml-4" />
-            </a>
+            </Link>
           </div>
 
           {/* Company button */}
           <div className="flex flex-row border-2 border-white text-center py-2 md:py-3 px-4 md:px-10 lg:px-20 text-white hover:bg-white hover:text-primary cursor-pointer transition-all duration-700 ease-in-out">
-            <a
-              href="/company"
+            <Link to="/company"
               className="uppercase text-sm md:text-xl lg:text-2xl flex items-center w-full justify-center"
             >
               {t("company")}
-            </a>
+            </Link>
           </div>
 
           {/* Contacts button */}
           <div className="flex flex-row border-2 border-white text-center py-2 md:py-3 px-4 md:px-10 lg:px-20 text-white hover:bg-white hover:text-primary cursor-pointer transition-all duration-700 ease-in-out">
-            <a
-              href="/contacts"
+            <Link to="/contacts"
               className="uppercase text-sm md:text-xl lg:text-2xl flex items-center w-full justify-center"
             >
               {t("contacts")}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -64,9 +63,9 @@ const Hero = () => {
       <div className="w-full absolute bottom-3 md:bottom-20 lg:bottom-0 left-0 right-0 flex justify-center items-center p-4 md:p-10 text-white">
         <div className="z-50 flex-col space-y-4 md:space-y-10">
           <div className="border-2 border-white rounded-full text-center p-2 md:p-3 text-white hover:bg-white hover:text-primary hover:cursor-pointer transition-all duration-1000 ease-in-out">
-            <a className="text-base md:text-2xl " href="#category">
+            <Link to="#category" className="text-base md:text-2xl ">
               <RiArrowDownWideFill className="text-2xl md:text-4xl" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

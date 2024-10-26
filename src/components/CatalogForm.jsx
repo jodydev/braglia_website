@@ -1,5 +1,6 @@
 import { RiDownloadLine } from "react-icons/ri";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import Four from "../assets/images/icons/4.png";
 import One from "../assets/images/icons/1.png";
 import Two from "../assets/images/icons/2.png";
@@ -19,16 +20,16 @@ const CatalogForm = () => {
     { name: "Masotti", fileName: "catalogo-masotti.pdf" },
   ];
 
-  const downloadCatalog = (fileName) => {
-    try {
-      const link = document.createElement("a");
-      link.href = `${catalogBaseUrl}${fileName}`;
-      link.download = fileName;
-      link.click();
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  // const downloadCatalog = (fileName) => {
+  //   try {
+  //     const link = document.createElement("a");
+  //     link.href = `${catalogBaseUrl}${fileName}`;
+  //     link.download = fileName;
+  //     link.click();
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
   return (
     <section id="catalog" className="flex flex-col h-auto lg:h-screen w-full relative px-0 py-10 lg:p-10">
@@ -72,7 +73,7 @@ const CatalogForm = () => {
           <p className="text-black text-nowrap text-2xl md:text-3xl xl:text-4xl flex items-center justify-start lg:justify-center">
             Catalogo Completo
             <RiDownloadLine
-              onClick={() => downloadCatalog("catalogo-completo.pdf")} 
+              // onClick={() => downloadCatalog("catalogo-completo.pdf")} 
               className="ms-3 inline-block text-4xl cursor-pointer"
             />
           </p>
@@ -91,7 +92,7 @@ const CatalogForm = () => {
                 </div>
                 <div className="flex flex-col w-1/2 justify-end items-end">
                   <RiDownloadLine
-                    onClick={() => downloadCatalog(category.fileName)}
+                    // onClick={() => downloadCatalog(category.fileName)}
                     className="ms-3 inline-block text-4xl cursor-pointer"
                   />
                 </div>
@@ -102,14 +103,14 @@ const CatalogForm = () => {
         <div className="hidden lg:flex flex-col items-center w-full md:w-1/3">
           <div className="absolute bottom-10 flex flex-col space-y-5">
             <div className="border-2 border-black text-center py-3 px-5 md:px-20 text-black hover:bg-gray-200 hover:cursor-pointer transition-all duration-300 ease-in-out">
-              <a href="/company" className="uppercase text-lg md:text-2xl">
+              <Link to="/company" className="uppercase text-lg md:text-2xl">
                 {t("company")}
-              </a>
+              </Link>
             </div>
             <div className="border-2 border-black text-center py-3 px-5 md:px-20 text-black hover:bg-gray-200 hover:cursor-pointer transition-all duration-300 ease-in-out">
-              <a href="/contacts" className="uppercase text-lg md:text-2xl">
+              <Link to="/contacts" className="uppercase text-lg md:text-2xl">
                 {t("contacts")}
-              </a>
+              </Link>
             </div>
           </div>
         </div>

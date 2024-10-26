@@ -77,7 +77,7 @@ const BackgroundAnimation = () => {
   }, []);
 
   return (
-    <div className="hidden md:absolute inset-0 md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-3 gap-4 text-secondary opacity-100 z-0">
+    <div className="absolute inset-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-3 gap-4 text-secondary opacity-100 z-0">
       <img
         src={One}
         alt="Icon 1"

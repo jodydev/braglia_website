@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import Logo from "../assets/images/loghi/logo.png";
 import { FaPlus } from "react-icons/fa";
+import Logo from "../assets/images/loghi/logo.png";
 
 const Header = ({ isContactPage, isCatalogPage }) => {
   const { t, i18n } = useTranslation();
@@ -19,7 +20,7 @@ const Header = ({ isContactPage, isCatalogPage }) => {
         isContactPage || isCatalogPage ? "p-4 md:p-10 2xl:p-20" : ""
       }`}
     >
-      <a href="/">
+      <Link to="/">
         <img
           src={Logo}
           alt="Logo"
@@ -27,7 +28,7 @@ const Header = ({ isContactPage, isCatalogPage }) => {
             isContactPage || isCatalogPage ? "filter invert" : ""
           }`}
         />
-      </a>
+      </Link>
       <div
         className={`flex md:space-x-10 xl:space-x-40 ${
           isContactPage ? "text-black" : "text-white"
@@ -43,14 +44,13 @@ const Header = ({ isContactPage, isCatalogPage }) => {
           } 
          hidden lg:flex lg:flex-row border-2 text-center py-3 px-5 transition-all duration-1000 ease-in-out`}
         >
-          <a
-            href={isCatalogPage ? undefined : "/catalog"}
+          <Link to={isCatalogPage ? undefined : "/catalog"}
             className="uppercase text-2xl flex items-center"
             onClick={(e) => isCatalogPage && e.preventDefault()}
           >
             {t("catalog")}
             <FaPlus className="text-2xl ml-4" />
-          </a>
+          </Link>
         </div>
         <div className="flex space-x-5">
           <div

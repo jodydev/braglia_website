@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ToastContainer, toast } from "react-toastify";
 import Cube from "../assets/images/icons/cube.png";
@@ -302,9 +303,9 @@ const ContactForm = () => {
           </div>
           <div className="hidden lg:block sticky mt-20 md:mt-40 flex-col space-y-5">
             <div className="border-2 border-black text-center py-3 px-10 md:px-20 text-black hover:bg-gray-200 hover:cursor-pointer transition-all duration-1000 ease-in-out">
-              <a href="/company" className="uppercase text-lg md:text-2xl">
+              <Link to="/company" className="uppercase text-lg md:text-2xl">
                 {t("company")}
-              </a>
+              </Link>
             </div>
             <div className="border-2 border-black bg-black text-center py-3 px-10 md:px-20 text-white cursor-not-allowed transition-all duration-1000 ease-in-out">
               <p className="uppercase text-lg md:text-2xl cursor-not-allowed">
