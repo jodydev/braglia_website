@@ -37,7 +37,7 @@ const Category = () => {
     ),
     responsive: [
       {
-        breakpoint: 640,
+        breakpoint: 460,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -46,10 +46,21 @@ const Category = () => {
         },
       },
       {
-        breakpoint: 1024,
+        breakpoint: 640,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+          arrows: false,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true,
         },
       },
     ],

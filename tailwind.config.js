@@ -11,8 +11,10 @@ module.exports = {
         secondary: '#c8ae92', // Crema
       },
       screens: {
+        '3xl': '3840px',
         '2xl': '2440px',
-        'xl': '1920px',
+        'fh' : '1920px',
+        'xl': '1440px',
         'lg': '1024px',
         'md': '768px',
         'sm': '640px',

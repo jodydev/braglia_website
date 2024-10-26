@@ -7,8 +7,16 @@ import Five from "../assets/images/icons/5.png";
 import Six from "../assets/images/icons/6.png";
 import Seven from "../assets/images/icons/7.png";
 
+const isMobile = () => window.innerWidth < 768;
+
 const getInitialPositions = () => {
-  if (window.innerWidth >= 2440) {
+  if (isMobile()) {
+    return [
+      { top: "5%", left: "40%" },
+      { top: "auto", bottom: "10px", left: "10%" },
+      { top: "55%", bottom: "10px", left: "70%" }, 
+    ];
+  } else if (window.innerWidth >= 2440) {
     return [
       { top: "180px", left: "-250px" }, 
       { top: "auto", bottom: "100px", left: "400px" },
@@ -28,7 +36,7 @@ const getInitialPositions = () => {
       { top: "-260px", left: "1200px" },
       { top: "240px", left: "900px" },
     ];
-  } else if (window.innerWidth >= 768) {
+  }  else if (window.innerWidth >= 768) {
     return [
       { top: "110px", left: "-160px" },
       { top: "auto", bottom: "30px", left: "240px" },
@@ -37,16 +45,6 @@ const getInitialPositions = () => {
       { top: "-150px", left: "400px" },
       { top: "-190px", left: "800px" },
       { top: "190px", left: "720px" },
-    ];
-  } else {
-    return [
-      { top: "10px", left: "-20px" },
-      { top: "auto", bottom: "4px", left: "40px" },
-      { top: "auto", bottom: "-4px", left: "100px" },
-      { top: "auto", bottom: "4px", left: "150px" },
-      { top: "-30px", left: "60px" },
-      { top: "-50px", left: "120px" },
-      { top: "30px", left: "90px" },
     ];
   }
 };
@@ -68,7 +66,7 @@ const BackgroundAnimation = () => {
         newPositions.push(firstPosition);
         return newPositions;
       });
-    }, 1500);
+    }, 2000);
 
     return () => {
       clearInterval(interval);
@@ -76,50 +74,20 @@ const BackgroundAnimation = () => {
     };
   }, []);
 
+  const images = [One, Two, Three, Four, Five, Six, Seven];
+  const displayedImages = isMobile() ? images.slice(0, 3) : images;
+
   return (
     <div className="absolute inset-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-3 gap-4 text-secondary opacity-100 z-0">
-      <img
-        src={One}
-        alt="Icon 1"
-        className="h-[100px] w-[100px] sm:h-[150px] sm:w-[100px] lg:h-[250px] lg:w-[200px] xl:h-[350px] xl:w-[300px] 2xl:h-[350px] 2xl:w-[300px] text-primary absolute transition-all duration-1000 ease-in-out"
-        style={positions[0]}
-      />
-      <img
-        src={Two}
-        alt="Icon 2"
-        className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px] lg:h-[250px] lg:w-[250px] xl:h-[350px] xl:w-[350px] 2xl:h-[350px] 2xl:w-[350px] text-primary absolute transition-all duration-1000 ease-in-out"
-        style={positions[1]}
-      />
-      <img
-        src={Three}
-        alt="Icon 3"
-        className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px] lg:h-[250px] lg:w-[250px] xl:h-[350px] xl:w-[350px] 2xl:h-[350px] 2xl:w-[350px] text-primary absolute transition-all duration-1000 ease-in-out"
-        style={positions[2]}
-      />
-      <img
-        src={Four}
-        alt="Icon 4"
-        className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px] lg:h-[250px] lg:w-[250px] xl:h-[350px] xl:w-[350px] 2xl:h-[350px] 2xl:w-[350px] text-primary absolute transition-all duration-1000 ease-in-out"
-        style={positions[3]}
-      />
-      <img
-        src={Five}
-        alt="Icon 5"
-        className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px] lg:h-[250px] lg:w-[250px] xl:h-[350px] xl:w-[350px] 2xl:h-[350px] 2xl:w-[350px] text-primary absolute rotate-60 transition-all duration-1000 ease-in-out"
-        style={positions[4]}
-      />
-      <img
-        src={Six}
-        alt="Icon 6"
-        className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px] lg:h-[250px] lg:w-[250px] xl:h-[350px] xl:w-[350px] 2xl:h-[350px] 2xl:w-[350px] text-primary absolute transition-all duration-1000 ease-in-out"
-        style={positions[5]}
-      />
-      <img
-        src={Seven}
-        alt="Icon 7"
-        className="h-[100px] w-[100px] sm:h-[50px] sm:w-[150px] lg:h-[150px] lg:w-[250px] xl:h-[250px] xl:w-[350px] 2xl:h-[250px] 2xl:w-[350px] text-primary absolute transition-all duration-1000 ease-in-out"
-        style={positions[6]}
-      />
+      {displayedImages.map((src, index) => (
+        <img
+          key={index}
+          src={src}
+          alt={`Icon ${index + 1}`}
+          className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px] lg:h-[250px] lg:w-[250px] fh:h-[350px] fh:w-[350px] 2xl:h-[350px] 2xl:w-[350px] text-primary absolute transition-all duration-1000 ease-in-out"
+          style={positions[index]}
+        />
+      ))}
     </div>
   );
 };
