@@ -84,7 +84,7 @@ const BackgroundAnimation = () => {
           key={index}
           src={src}
           alt={`Icon ${index + 1}`}
-          className="h-[100px] w-[100px] sm:h-[150px] sm:w-[150px] lg:h-[250px] lg:w-[250px] fh:h-[350px] fh:w-[350px] 2xl:h-[350px] 2xl:w-[350px] text-primary absolute transition-all duration-1000 ease-in-out"
+          className="h-[200px] w-[200px] sm:h-[200px] sm:w-[200px] md:h-[250px] md:w-[250px] lg:h-[300px] lg:w-[300px] fh:h-[350px] fh:w-[350px] 2xl:h-[350px] 2xl:w-[350px] text-primary absolute transition-all duration-1000 ease-in-out"
           style={positions[index]}
         />
       ))}

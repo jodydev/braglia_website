@@ -22,7 +22,7 @@ const Hero = () => {
           <img
             src={Image}
             alt="Hero Image"
-            className="flex items-center justify-center w-4/5 h-1/2 sm:w-3/5 md:w-3/5 lg:w-3/5 xl:w-2/5 2xl:w-2/5 3xl:w-2/3" 
+            className="flex items-center justify-center w-4/5 h-1/2 sm:w-3/5 md:w-4/5 lg:w-3/5 xl:w-2/5 2xl:w-2/5 3xl:w-2/3" 
           />
         </main>
       </div>
@@ -30,7 +30,7 @@ const Hero = () => {
       <div className="w-4/5 sm:w-3/5 md:w-2/5 2xl:w-1/4 3xl:w-1/3 z-50 absolute bottom-[14%] sm:bottom-32 md:bottom-5 lg:bottom-10 right-11 sm:right-36 md:right-5 2xl:right-20 3xl:bottom-32 flex justify-center items-center text-white">
         <div className="flex flex-col space-y-3 md:space-y-5 xl:space-y-8 w-full px-4 md:px-0">
           {/* Catalog button */}
-          <div className="lg:hidden flex flex-row border-2 border-white text-center py-2 md:py-3 px-4 md:px-10 lg:px-20 text-white hover:bg-white hover:text-primary cursor-pointer transition-all duration-700 ease-in-out">
+          <div className="md:hidden flex flex-row border-2 border-white text-center py-2 md:py-3 px-4 md:px-10 lg:px-20 text-white hover:bg-white hover:text-primary cursor-pointer transition-all duration-700 ease-in-out">
             <Link to="/catalog"
               
               className="uppercase text-sm md:text-xl lg:text-2xl flex items-center w-full justify-center  ml-4 md:ml-8"

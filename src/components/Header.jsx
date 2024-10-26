@@ -42,7 +42,7 @@ const Header = ({ isContactPage, isCatalogPage }) => {
               ? "border-black text-black hover:bg-black hover:text-white cursor-pointer"
               : "border-white text-white hover:bg-white hover:text-black cursor-pointer"
           } 
-         hidden lg:flex lg:flex-row border-2 text-center py-3 px-5 transition-all duration-1000 ease-in-out`}
+         hidden md:flex md:flex-row border-2 text-center py-3 px-5 transition-all duration-1000 ease-in-out`}
         >
           <Link to={isCatalogPage ? undefined : "/catalog"}
             className="uppercase text-2xl flex items-center"
