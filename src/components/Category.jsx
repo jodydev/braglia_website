@@ -63,6 +63,13 @@ const Category = () => {
           dots: true,
         },
       },
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
     ],
   };
 
@@ -75,12 +82,12 @@ const Category = () => {
         {t("categories")}
       </h2>
 
-      <div className="flex flex-col items-center justify-center py-10 sm:py-20 md:py-32 lg:py-40 lg:px-20 xl:px-60">
+      <div className="flex flex-col items-center justify-center py-10 sm:py-20 md:py-32 lg:py-40 lg:px-20 xl:px-40">
         <Slider {...settings} className="w-full">
           {translatedCategories.map((item) => (
             <div
               key={item.id}
-              className="p-10 md:p-5 xl:p-10 flex flex-col justify-center items-center w-full h-full focus:outline-none cursor-pointer transition-transform duration-500 sm:mx-6 md:mx-8"
+              className="p-10 md:p-5 flex flex-col justify-center items-center w-full h-full focus:outline-none cursor-pointer transition-transform duration-500 sm:mx-6 md:mx-8"
             >
               <div className="relative overflow-hidden w-full h-full mb-10">
                 <img
