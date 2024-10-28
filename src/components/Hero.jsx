@@ -18,7 +18,7 @@ const Hero = () => {
 
       <div className="flex flex-col relative z-50 space-y-0">
         <Header />
-        <main className="px-4 py-10 md:py-16 md:px-20 lg:px-24 lg:py-20 2xl:px-60 2xl:py-32 flex items-center justify-center lg:justify-start space-y-3">
+        <main className="px-4 py-10 md:py-16 md:px-20 lg:px-24 lg:py-20 2xl:px-60 2xl:py-24 flex items-center justify-center lg:justify-start space-y-3">
           <img
             src={Image}
             alt="Hero Image"
