@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import { colorIcons } from "../data/colorIcons";
 import "react-toastify/dist/ReactToastify.css";
-import CompleteCatalog from "../assets/pdf/catalogo_completo.pdf";
-import LanceCatalog from "../assets/pdf/catalogo_lance.pdf";
-import GettiCatalog from "../assets/pdf/catalogo_getti.pdf";
-import UgelliCatalog from "../assets/pdf/catalogo_ugelli.pdf";
-import ComandiCatalog from "../assets/pdf/catalogo_comandi.pdf";
-import MasottiCatalog from "../assets/pdf/catalogo_masotti.pdf";
-import InovelCatalog from "../assets/pdf/catalogo_inovel.pdf";
+import CompleteCatalog from "../assets/pdf/Catalogo_Completo.pdf";
+import LanceCatalog from "../assets/pdf/Catalogo_Lance.pdf";
+import GettiCatalog from "../assets/pdf/Catalogo_Getti.pdf";
+import UgelliCatalog from "../assets/pdf/Catalogo_Ugelli.pdf";
+import ComandiCatalog from "../assets/pdf/Catalogo_Comandi.pdf";
+import MasottiCatalog from "../assets/pdf/Catalogo_Masotti.pdf";
+import InovelCatalog from "../assets/pdf/Catalogo_Inovel.pdf";
 
 const CatalogForm = () => {
   const { t } = useTranslation();
