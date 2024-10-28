@@ -118,7 +118,7 @@ const ContactForm = () => {
   return (
     <section
       id="contact-form"
-      className="flex flex-col h-auto w-full px-5 py-10 md:p-10 xl:p-20"
+      className="flex flex-col h-auto w-full px-5 fh:p-20"
     >
       <ToastContainer
         style={{ position: "absolute", bottom: "-100%", right: "5%" }}
@@ -148,7 +148,7 @@ const ContactForm = () => {
           />
         </div>
         <div className="flex-col mb-0">
-          <h2 className="text-black text-3xl md:text-6xl xl:text-8xl italic w-full mb-10 md:mb-20">
+          <h2 className="text-black text-4xl md:text-6xl fh:text-8xl italic w-full my-10 md:my-0">
             {t("contacts")}
           </h2>
         </div>
@@ -157,7 +157,7 @@ const ContactForm = () => {
             className="flex flex-col items-start w-full max-w-2xl"
             onSubmit={handleSubmit}
           >
-            <label className="text-black text-base md:text-2xl xl:text-3xl mb-4">
+            <label className="text-black text-base md:text-2xl fh:text-3xl mb-4">
               {t("company")}*
             </label>
             <input
@@ -168,7 +168,7 @@ const ContactForm = () => {
               required
               className="w-full p-2 md:p-4 mb-4 border-2 border-black focus:border-black focus:ring-0"
             />
-            <label className="text-black text-base md:text-2xl xl:text-3xl mb-4">
+            <label className="text-black text-base md:text-2xl fh:text-3xl mb-4">
               {t("mr/miss")}*
             </label>
             <input
@@ -180,7 +180,7 @@ const ContactForm = () => {
               className="w-full p-2 md:p-4 mb-4 border-2 border-black focus:border-black focus:ring-0"
             />
 
-            <label className="text-black text-base md:text-2xl xl:text-3xl mb-4">
+            <label className="text-black text-base md:text-2xl fh:text-3xl mb-4">
               Email*
             </label>
             <input
@@ -194,14 +194,14 @@ const ContactForm = () => {
 
             <div className="mb-4">
               <div className="flex flex-col">
-                <label className="text-black text-base md:text-2xl xl:text-3xl mb-4">
+                <label className="text-black text-base md:text-2xl fh:text-3xl mb-4">
                   {t("company type")}*
                 </label>
 
                 {companyTypeOptions.map((option) => (
                   <label
                     key={option.id}
-                    className="flex items-center text-sm md:text-lg xl:text-xl mb-4"
+                    className="flex items-center text-sm md:text-lg fh:text-xl mb-4"
                   >
                     <input
                       type="checkbox"
@@ -217,14 +217,14 @@ const ContactForm = () => {
             </div>
 
             <div className="flex flex-col mb-4">
-              <label className="text-black text-base md:text-2xl xl:text-3xl mb-4">
+              <label className="text-black text-base md:text-2xl fh:text-3xl mb-4">
                 {t("company contacts")}*
               </label>
 
               {companyContacts.map((contact) => (
                 <label
                   key={contact.id}
-                  className="flex items-center text-sm md:text-lg xl:text-xl mb-4"
+                  className="flex items-center text-sm md:text-lg fh:text-xl mb-4"
                 >
                   <input
                     type="checkbox"
@@ -238,8 +238,8 @@ const ContactForm = () => {
               ))}
             </div>
 
-            <label className="text-black text-base md:text-2xl xl:text-3xl mb-4">
-              {t("object")}*
+            <label className="text-black text-base md:text-2xl fh:text-3xl mb-4">
+              {t("object")}
             </label>
             <input
               type="text"
@@ -247,9 +247,12 @@ const ContactForm = () => {
               value={formData.subject}
               onChange={handleChange}
               required
-              className="w-full p-2 md:p-4 mb-4 border-2 border-black focus:border-black focus:ring-0"
+              className="w-full h-32 p-2 mb-4 border-2 border-black focus:border-black focus:ring-0"
             />
 
+            <label className="text-black text-base md:text-2xl fh:text-3xl mb-4">
+              {t("Privacy")}*
+            </label>
             <div className="flex items-start  mb-4">
               <input
                 type="checkbox"
@@ -258,8 +261,8 @@ const ContactForm = () => {
                 onChange={handleChange}
                 required
                 className="hover:cursor-pointer mr-2 w-4 h-4 md:w-6 md:h-6 border-2 border-black rounded-none focus:ring-0 checked:bg-black"
-                />
-              <span className="text-black text-sm md:text-lg xl:text-xl">
+              />
+              <span className="text-black text-sm md:text-lg fh:text-xl">
                 {t("privacy policy")}*
               </span>
             </div>
@@ -274,50 +277,54 @@ const ContactForm = () => {
         </div>
         <div className="flex flex-col items-start md:items-center w-full md:w-1/3 h-full mt-10 lg:mt-0">
           <div className="flex flex-col justify-start items-start text-black">
-            <h3 className="text-xl md:text-3xl xl:text-4xl uppercase italic font-semibold">
+            <h3 className="text-xl md:text-3xl fh:text-4xl uppercase italic font-semibold">
               Braglia s.r.l
             </h3>
-            <p className="text-lg md:text-xl xl:text-3xl">
+            <p className="text-lg md:text-xl fh:text-3xl">
               {t("street")} Martin Lutero, 4
             </p>
-            <p className="text-lg md:text-xl xl:text-3xl">42122</p>
-            <p className="text-lg md:text-xl xl:text-3xl">
+            <p className="text-lg md:text-xl fh:text-3xl">42122</p>
+            <p className="text-lg md:text-xl fh:text-3xl">
               Reggio Emilia, Italy (UE)
             </p>
-            <p className="text-lg md:text-xl xl:text-3xl uppercase">
+            <p className="text-lg md:text-xl fh:text-3xl uppercase">
               Vat no. 00443530357
             </p>
-            <p className="text-lg md:text-xl xl:text-3xl my-10">
+            <p className="text-lg md:text-xl fh:text-3xl my-10 md:my-5 fh:my-10">
               +39 0522 340648
             </p>
-            <p className="text-lg md:text-xl xl:text-3xl font-semibold">
+            <p className="text-lg md:text-xl fh:text-3xl font-semibold">
               {t("general information")}:
             </p>
-            <p className="text-lg md:text-xl xl:text-3xl mb-10">
+            <p className="text-lg md:text-xl fh:text-3xl mb-10">
               info@braglia.it
             </p>
-            <p className="text-lg md:text-xl xl:text-3xl font-semibold">
+            <p className="text-lg md:text-xl fh:text-3xl font-semibold">
               {t("Orders")}
             </p>
-            <p className="text-lg md:text-xl xl:text-3xl">orders@braglia.it</p>
+            <p className="text-lg md:text-xl fh:text-3xl">orders@braglia.it</p>
           </div>
-          <div className="hidden lg:block sticky mt-20 md:mt-40 flex-col space-y-5">
-            <div className="border-2 border-black text-center py-3 px-10 md:px-20 text-black hover:bg-gray-200 hover:cursor-pointer transition-all duration-1000 ease-in-out">
-              <Link to="/company" className="uppercase text-lg md:text-2xl">
-                {t("company")}
-              </Link>
-            </div>
-            <div className="border-2 border-black bg-black text-center py-3 px-10 md:px-20 text-white cursor-not-allowed transition-all duration-1000 ease-in-out">
-              <p className="uppercase text-lg md:text-2xl cursor-not-allowed">
-                {t("contacts")}
-              </p>
-            </div>
+
+          <div className="hidden lg:flex flex-col space-y-5 absolute w-1/4 top-[50%] md:top-[75%] md:right-20">
+            <Link
+              to="/company"
+              className="uppercase text-lg md:text-2xl border-2 border-black text-center py-3 px-5 md:px-20 text-black hover:bg-black hover:text-white hover:cursor-pointer transition-all duration-700 ease-in-out "
+            >
+              {t("company")}
+            </Link>
+
+            <Link
+              to="/contacts"
+              className="uppercase text-lg md:text-2xl border-2 border-black bg-black text-center py-3 px-10 md:px-20 text-white 
+            transition-all duration-1000 ease-in-out cursor-not-allowed"
+            >
+              {t("contacts")}
+            </Link>
           </div>
         </div>
       </div>
     </section>
   );
 };
-
 
 export default ContactForm;

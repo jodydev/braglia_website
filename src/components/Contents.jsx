@@ -7,24 +7,58 @@ const Contents = ({ isCompanyPage }) => {
   const { t } = useTranslation();
   const isMobile = window.innerWidth < 768;
 
-  const translatedContents = contentsData.map((content) => ({
-    ...content,
-    title: t(content.title),
-    text: t(content.text),
-  }));
+  const staticCompanyContents = [
+    {
+      id: 1,
+      title: t(contentsCompanyData[0].title),
+      video: contentsCompanyData[0].video,
+    },
+    {
+      id: 2,
+      title: t(contentsCompanyData[1].title),
+      video: contentsCompanyData[1].video,
+    },
+    {
+      id: 3,
+      title: t(contentsCompanyData[2].title),
+      video: contentsCompanyData[2].video,
+    },
+    {
+      id: 4,
+      title: t(contentsCompanyData[3].title),
+      video: contentsCompanyData[3].video,
+    },
+  ];
 
-  const translatedCompanyContents = contentsCompanyData.map((content) => ({
-    ...content,
-    title: t(content.title),
-    text: t(content.text),
-  }));
+  const staticContents = [
+    {
+      id: 1,
+      title: t(contentsData[0].title),
+      image: contentsData[0].image,
+    },
+    {
+      id: 2,
+      title: t(contentsData[1].title),
+      image: contentsData[1].image,
+    },
+    {
+      id: 3,
+      title: t(contentsData[2].title),
+      image: contentsData[2].image,
+    },
+    {
+      id: 4,
+      title: t(contentsData[3].title),
+      image: contentsData[3].image,
+    },
+    {
+      id: 5,
+      image: contentsData[4].image,
+    }
+  ];
 
   return (
-    <div
-      className={`${
-        isCompanyPage ? "px-0 py-10" : "px-10 py-0"
-      } container mx-auto 2xl:px-60`}
-    >
+    <div className={`container mx-auto ${isCompanyPage ? "px-0 py-10" : "px-10 py-0"} 2xl:px-60`}>
       {isCompanyPage ? (
         <>
           <div className="w-full">
@@ -39,24 +73,18 @@ const Contents = ({ isCompanyPage }) => {
               className="hover:scale-105 transition-all duration-500 ease-in-out shadow-lg"
             ></iframe>
 
-            {translatedCompanyContents.map((content, index) => (
+            {staticCompanyContents.map((content, index) => (
               <div
                 key={content.id}
-                className={`flex flex-col md:flex-row items-center gap-6 md:gap-10 my-10 sm:my-16 md:my-20 2xl:my-60 ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : ""
+                className={`flex flex-col md:flex-row gap-6 md:gap-10 my-10 sm:my-16 md:my-20 2xl:my-60 ${
+                  (index === 1 || index === 2) ? "md:flex-row-reverse" : ""
                 }`}
               >
-                <div
-                  className={`w-full md:w-1/2 p-2 sm:p-4 ${
-                    index % 2 === 0 ? "animate-fadeInRight" : ""
-                  }`}
-             >
+                <div className={`w-full h-full md:w-1/2 p-2 sm:p-4 ${index === 0 || index === 3 ? "animate-fadeInRight" : ""}`}>
                   <iframe
                     width="100%"
                     height={isMobile ? "200" : "500"}
-                    src={`https://www.youtube.com/embed/${
-                      content.link.split("v=")[1].split("&")[0]
-                    }`}
+                    src={`https://www.youtube.com/embed/${content.video.split("v=")[1].split("&")[0]}`}
                     title={content.title}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -64,43 +92,34 @@ const Contents = ({ isCompanyPage }) => {
                     className="hover:scale-105 transition-all duration-500 ease-in-out shadow-lg"
                   ></iframe>
                 </div>
-                <div className={`w-full md:w-1/2 p-2 sm:p-5 ${
-                    index % 2 === 0 ? "animate-fadeInLeft" : ""
-                  }`}
-              >
-                  <h3 className="text-4xl md:text-5xl lg:text-6xl fh:text-8xl 2xl:text-9xl font-medium mb-2 sm:mb-4">
+                <div className={`flex items-start w-full md:w-1/2 p-2 sm:p-5 ${index === 0 ? "justify-start" : "justify-end items-end"}`}>
+                  <h3 className="text-4xl md:text-5xl lg:text-6xl fh:text-7xl font-medium mb-2 sm:mb-4">
                     {content.title}
                   </h3>
-                  <p className="mt-6 sm:mt-8 md:mt-10 text-base sm:text-lg 2xl:text-2xl">
-                    {content.text}
-                  </p>
                 </div>
               </div>
             ))}
           </div>
         </>
       ) : (
-        translatedContents.map((content, index) => (
+        staticContents.map((content, index) => (
           <div
             key={content.id}
-            className={`flex flex-col md:flex-row items-center gap-6 md:gap-10 mb-10 sm:mb-16 md:mb-20 2xl:mb-60 ${
-              index % 2 === 0 ? "md:flex-row-reverse" : ""
+            className={`flex flex-col md:flex-row gap-6 md:gap-10 mb-10 sm:mb-16 md:mb-20 2xl:mb-60 ${
+              (index === 1 || index === 2 || index === 4) ? "md:flex-row-reverse" : ""
             }`}
           >
-            <div className="w-full h-full md:w-1/2 p-2 sm:p-4">
+            <div className={`w-full h-full md:w-1/2 p-2 sm:p-4 ${index === 0 || index === 3 ? "animate-fadeInRight flex justify-end items-end" : index === 4 ? "md:flex md:justify-end md:items-end" : ""}`}>
               <img
                 src={content.image}
                 alt={content.title}
-                className="w-full fh:w-2/3 h-auto hover:scale-105 transition-all duration-500 ease-in-out shadow-lg"
+                className={`w-full h-auto hover:scale-105 transition-all duration-500 ease-in-out shadow-lg ${index === 0 ? "h-full" : index === 1 ? "h-full w-2/3" : index === 2 ? "h-full" : index === 4 ? "h-full md:w-2/4" : "h-full md:w-2/3"}`}
               />
             </div>
-            <div className="w-full md:w-1/2 p-2 sm:p-5">
-              <h3 className="text-4xl md:text-5xl lg:text-6xl fh:text-8xl 2xl:text-9xl font-medium mb-2 sm:mb-4">
+            <div className={`flex items-start w-full md:w-1/2 p-2 sm:p-5 ${index === 0 ? "justify-start" : "justify-end items-end"}`}>
+              <h3 className="text-4xl md:text-5xl lg:text-6xl fh:text-7xl font-medium mb-2 sm:mb-4">
                 {content.title}
               </h3>
-              <p className="mt-6 sm:mt-8 md:mt-10 text-base lg:text-base 2xl:text-2xl">
-                {content.text}
-              </p>
             </div>
           </div>
         ))

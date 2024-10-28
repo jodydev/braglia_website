@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 359 359.8">
+  <!-- Generator: Adobe Illustrator 29.0.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 186)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+      }
+
+      .st1 {
+        fill: #c6b99a;
+      }
+
+      .st2 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="st0" y="0" width="359" height="359.8"/>
+    </clipPath>
+  </defs>
+  <g id="Raggruppa_127">
+    <g class="st2">
+      <g id="Raggruppa_98">
+        <g id="Raggruppa_97">
+          <path id="Tracciato_107" class="st1" d="M0,179C0,80.6,79.7.8,178.5,0c98.5-.8,180.8,81.4,180.5,180.2-.2,98.5-82.9,180.2-181.7,179.6C80.1,359.2,0,277.5,0,179"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

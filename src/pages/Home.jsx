@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { ToastContainer } from 'react-toastify';
 import Hero from "../components/Hero";
 import Category from "../components/Category";
 import Contents from "../components/Contents";
@@ -17,6 +18,7 @@ const Home = () => {
       <Hero />
       <Category />
       <Contents />
+      <ToastContainer />
       <Footer />
     </section>
   );

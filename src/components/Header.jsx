@@ -44,7 +44,7 @@ const Header = ({ isContactPage, isCatalogPage }) => {
          hidden md:flex md:flex-row border-2 text-center py-3 px-5 transition-all duration-1000 ease-in-out`}
         >
           <Link to={isCatalogPage ? undefined : "/catalog"}
-            className="uppercase text-2xl flex items-center"
+            className={`${isCatalogPage ? "cursor-not-allowed" : "cursor-pointer"} uppercase text-2xl flex items-center`}
             onClick={(e) => isCatalogPage && e.preventDefault()}
           >
             {t("catalog")}
