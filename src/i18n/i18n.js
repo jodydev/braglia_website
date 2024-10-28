@@ -46,6 +46,7 @@ const resources = {
       "please select at least one company contact": "Please select at least one company contact",
       "commands": "Commands",
       "inovel": "Inovel",
+      "corporate video": "Corporate Video",
     },
   },
   it: {
@@ -92,6 +93,7 @@ const resources = {
       "please select at least one company contact": "Seleziona almeno un contatto aziendale",
       "commands": "Comandi",
       "inovel": "Inovel",
+      "corporate video": "Video aziendale",
     },
   },
 };
