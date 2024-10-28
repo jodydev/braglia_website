@@ -76,20 +76,36 @@ const BackgroundAnimation = () => {
 
   const images = [One, Two, Three, Four, Five, Six, Seven];
   const displayedImages = isMobile() ? images.slice(0, 3) : images;
-
+  
   return (
     <div className="absolute inset-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-3 gap-4 text-secondary opacity-100 z-0">
-      {displayedImages.map((src, index) => (
-        <img
-          key={index}
-          src={src}
-          alt={`Icon ${index + 1}`}
-          className="h-[200px] w-[200px] sm:h-[200px] sm:w-[200px] md:h-[250px] md:w-[250px] lg:h-[300px] lg:w-[300px] fh:h-[350px] fh:w-[350px] 2xl:h-[350px] 2xl:w-[350px] text-primary absolute transition-all duration-1000 ease-in-out"
-          style={positions[index]}
-        />
-      ))}
+      {displayedImages.map((src, index) => {
+        const isSeven = index === 6; 
+        const isOne = index === 0;
+        const baseHeight = isSeven ? 200 - 125 : isOne ? 350 : 200; // 150px per "Seven", 200px per le altre
+  
+        return (
+          <img
+            key={index}
+            src={src}
+            alt={`Icon ${index + 1}`}
+            className={`
+              h-[${baseHeight}px] w-[200px] 
+              sm:h-[${baseHeight}px] sm:w-[200px] 
+              md:h-[${baseHeight + 50}px] md:w-[250px] 
+              lg:h-[${baseHeight + 100}px] lg:w-[300px] 
+              fh:h-[${baseHeight + 150}px] fh:w-[350px] 
+              2xl:h-[${baseHeight + 150}px] 2xl:w-[350px] 
+              text-primary absolute transition-all duration-1000 ease-in-out
+            `}
+            style={positions[index]}
+          />
+        );
+      })}
     </div>
   );
+  
+  
 };
 
 export default BackgroundAnimation;
