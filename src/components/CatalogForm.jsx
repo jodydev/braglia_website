@@ -29,6 +29,7 @@ const CatalogForm = () => {
       const link = document.createElement("a");
       link.href = file;
       link.download = file.split("/").pop();
+      console.log(link.download);
       link.click();
       toast.success(
         `${t("The")} ${link.download.replace(".pdf", "")} ${t(
