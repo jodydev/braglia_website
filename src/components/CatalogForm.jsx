@@ -31,9 +31,9 @@ const CatalogForm = () => {
       link.download = file.split("/").pop();
       link.click();
       toast.success(
-        `${t("The")} ${link.download
-          .replace(".pdf", "")
-          .replace(/_/g, " ")} ${t("downloaded successfully!")}`
+        `${t("The")} ${link.download.replace(".pdf", "")} ${t(
+          "downloaded successfully!"
+        )}`
       );
     } catch (error) {
       console.error(error);
