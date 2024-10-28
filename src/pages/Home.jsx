@@ -3,7 +3,6 @@ import Hero from "../components/Hero";
 import Category from "../components/Category";
 import Contents from "../components/Contents";
 import Footer from "../components/Footer";
-import Animations from "../animations/Animations";
 
 const Home = () => {
   const isMobile = window.innerWidth < 768;
@@ -19,7 +18,6 @@ const Home = () => {
       <Category />
       <Contents />
       <Footer />
-      <Animations />
     </section>
   );
 };

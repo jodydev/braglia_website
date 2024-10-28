@@ -73,6 +73,16 @@ const Category = () => {
     ],
   };
 
+  const CustomArrow = ({ direction, ...props }) => {
+    return (
+      <div {...props} className={`slick-arrow ${direction}-arrow`}>
+        <div className="next-slick-arrow">
+          <IoIosArrowDroprightCircle className="text-gray-200" size={60} />
+        </div>
+      </div>
+    );
+  };
+
   return (
     <section
       id="categories"
@@ -96,7 +106,7 @@ const Category = () => {
                   className="p-3 drop-shadow-lg object-cover w-full h-full transition-transform duration-500 hover:scale-105"
                 />
               </div>
-              <h3 className="title-animation text-2xl md:text-2xl xl:text-3xl uppercase text-center mt-2 sm:mt-4 md:mt-6 xl:mt-10 flex items-center justify-center">
+              <h3 className="text-2xl md:text-2xl xl:text-3xl uppercase text-center mt-2 sm:mt-4 md:mt-6 xl:mt-10 flex items-center justify-center">
                 {item.name}
               </h3>
             </div>

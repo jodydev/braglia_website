@@ -21,7 +21,7 @@ const CompanyContent = () => {
             {t("company content")}
           </p>
         </div>
-        <div className="flex justify-center items-center w-full md:w-1/3 mt-5 lg:mt-0">
+        <div className="flex justify-center items-center w-full md:w-1/3 mt-5 lg:mt-0 animate-fadeInRight">
           <img
             src="https://picsum.photos/400/600"
             alt=""

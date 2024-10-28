@@ -18,11 +18,11 @@ const Hero = () => {
 
       <div className="flex flex-col relative z-50 space-y-0">
         <Header />
-        <main className="px-4 py-3 md:py-8 md:px-20 lg:px-24 lg:py-10 2xl:px-60 2xl:py-20 flex items-center justify-center lg:justify-start space-y-3">
+        <main className="px-4 py-10 md:py-16 md:px-20 lg:px-24 lg:py-20 2xl:px-60 2xl:py-32 flex items-center justify-center lg:justify-start space-y-3">
           <img
             src={Image}
             alt="Hero Image"
-            className="flex items-center justify-center w-4/5 h-1/2 sm:w-3/5 md:w-4/5 lg:w-3/5 xl:w-1/3 2xl:w-2/5 3xl:w-2/3"
+            className="flex items-center justify-center w-4/5 h-1/2 sm:w-3/5 md:w-full lg:w-full xl:w-1/3 2xl:w-2/5 3xl:w-2/3"
           />
         </main>
       </div>

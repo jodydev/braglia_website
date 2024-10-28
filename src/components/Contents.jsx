@@ -46,7 +46,11 @@ const Contents = ({ isCompanyPage }) => {
                   index % 2 === 0 ? "md:flex-row-reverse" : ""
                 }`}
               >
-                <div className="w-full md:w-1/2 p-2 sm:p-4">
+                <div
+                  className={`w-full md:w-1/2 p-2 sm:p-4 ${
+                    index % 2 === 0 ? "animate-fadeInRight" : ""
+                  }`}
+             >
                   <iframe
                     width="100%"
                     height={isMobile ? "200" : "500"}
@@ -60,13 +64,16 @@ const Contents = ({ isCompanyPage }) => {
                     className="hover:scale-105 transition-all duration-500 ease-in-out shadow-lg"
                   ></iframe>
                 </div>
-                <div className="w-full md:w-1/2 p-2 sm:p-5">
-                  <h3 className="title-animation text-4xl md:text-5xl lg:text-6xl fh:text-8xl 2xl:text-9xl font-medium mb-2 sm:mb-4">
+                <div className={`w-full md:w-1/2 p-2 sm:p-5 ${
+                    index % 2 === 0 ? "animate-fadeInLeft" : ""
+                  }`}
+              >
+                  <h3 className="text-4xl md:text-5xl lg:text-6xl fh:text-8xl 2xl:text-9xl font-medium mb-2 sm:mb-4">
                     {content.title}
                   </h3>
                   <p className="mt-6 sm:mt-8 md:mt-10 text-base sm:text-lg 2xl:text-2xl">
-                  {content.text}
-                </p>
+                    {content.text}
+                  </p>
                 </div>
               </div>
             ))}
@@ -88,12 +95,12 @@ const Contents = ({ isCompanyPage }) => {
               />
             </div>
             <div className="w-full md:w-1/2 p-2 sm:p-5">
-              <h3 className="title-animation text-4xl md:text-5xl lg:text-6xl fh:text-8xl 2xl:text-9xl font-medium mb-2 sm:mb-4">
+              <h3 className="text-4xl md:text-5xl lg:text-6xl fh:text-8xl 2xl:text-9xl font-medium mb-2 sm:mb-4">
                 {content.title}
               </h3>
-              <p className="italic mt-6 sm:mt-8 md:mt-10 text-base lg:text-base 2xl:text-2xl">
-              {content.text}
-            </p>
+              <p className="mt-6 sm:mt-8 md:mt-10 text-base lg:text-base 2xl:text-2xl">
+                {content.text}
+              </p>
             </div>
           </div>
         ))
