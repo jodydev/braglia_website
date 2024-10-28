@@ -32,7 +32,7 @@ const CatalogForm = () => {
       console.log(link.download);
       link.click();
       toast.success(
-        `${t("The")} ${link.download.replace(".pdf", "")} ${t(
+        `${t("The")} ${link.download.replace("_", " ").replace(".pdf", "")} ${t(
           "downloaded successfully!"
         )}`
       );
