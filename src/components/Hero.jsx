@@ -64,7 +64,7 @@ const Hero = () => {
 
       <div className="w-full absolute bottom-20 md:bottom-0 lg:bottom-0 left-0 right-0 flex justify-center items-center p-4 md:p-10 text-white">
         <div className="z-50 flex-col space-y-4 md:space-y-10">
-          <div className="border-2 border-white rounded-full text-center p-2 md:p-3 text-white hover:bg-white hover:text-primary hover:cursor-pointer transition-all duration-1000 ease-in-out">
+          <div className=" animate-bounce border-2 border-white rounded-full text-center p-2 md:p-3 text-white hover:bg-white hover:text-primary hover:cursor-pointer transition-all duration-1000 ease-in-out">
             <a href="#categories" className="text-base md:text-2xl ">
               <RiArrowDownWideFill className="text-2xl md:text-4xl" />
             </a>
