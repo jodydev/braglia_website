@@ -82,7 +82,7 @@ const BackgroundAnimation = () => {
       {displayedImages.map((src, index) => {
         const isSeven = index === 6; 
         const isOne = index === 0;
-        const baseHeight = isSeven ? 200 - 125 : isOne ? 350 : 200; // 150px per "Seven", 200px per le altre
+        const baseHeight = isSeven ? 200 - 125 : isOne ? 350 : 250;
   
         return (
           <img
