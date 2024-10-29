@@ -152,7 +152,7 @@ const ContactForm = () => {
             {t("contacts")}
           </h2>
         </div>
-        <div className="flex flex-col items-center md:items-start md:w-1/3">
+        <div className="md:mb-20 flex flex-col items-center md:items-start md:w-1/3">
           <form
             className="flex flex-col items-start w-full max-w-2xl"
             onSubmit={handleSubmit}

@@ -77,10 +77,10 @@ const Contents = ({ isCompanyPage }) => {
               <div
                 key={content.id}
                 className={`flex flex-col md:flex-row gap-6 md:gap-10 my-10 sm:my-16 md:my-20 2xl:my-60 ${
-                  (index === 1 || index === 2) ? "md:flex-row-reverse" : ""
+                  (index === 1 || index === 3) ? "md:flex-row-reverse" : ""
                 }`}
               >
-                <div className={`w-full h-full md:w-1/2 p-2 sm:p-4 ${index === 0 || index === 3 ? "animate-fadeInRight" : ""}`}>
+                <div className={`w-full h-full md:w-1/2 p-2 sm:p-4 ${index === 0 || index === 2 || index === 3 ? "md:w-full " : ""}`}>
                   <iframe
                     width="100%"
                     height={isMobile ? "200" : "500"}
@@ -92,8 +92,8 @@ const Contents = ({ isCompanyPage }) => {
                     className="hover:scale-105 transition-all duration-500 ease-in-out shadow-lg"
                   ></iframe>
                 </div>
-                <div className={`flex items-start w-full md:w-1/2 p-2 sm:p-5 ${index === 0 ? "justify-start" : "justify-end items-end"}`}>
-                  <h3 className="text-4xl md:text-5xl lg:text-6xl fh:text-7xl font-medium mb-2 sm:mb-4">
+                <div className={`flex items-start w-full md:w-1/2 p-2 sm:p-5 ${index === 0  ? "justify-start items-end" : "justify-end items-end"}`}>
+                  <h3 className="text-4xl fh:text-6xl font-medium mb-2 sm:mb-4">
                     {content.title}
                   </h3>
                 </div>
@@ -109,16 +109,16 @@ const Contents = ({ isCompanyPage }) => {
               (index === 1 || index === 2 || index === 4) ? "md:flex-row-reverse" : ""
             }`}
           >
-            <div className={`w-full h-full md:w-1/2 p-2 sm:p-4 ${index === 0 || index === 3 ? "animate-fadeInRight flex justify-end items-end" : index === 4 ? "md:flex md:justify-end md:items-end" : ""}`}>
+            <div className={`w-full h-full md:w-1/2 p-2 sm:p-4 ${index === 0 || index === 3 ? "flex justify-end items-end" : index === 4 ? "md:flex md:justify-end md:items-end" : ""}`}>
               <img
                 src={content.image}
                 alt={content.title}
                 className={`w-full h-auto hover:scale-105 transition-all duration-500 ease-in-out shadow-lg ${index === 0 ? "h-full" : index === 1 ? "h-full w-2/3" : index === 2 ? "h-full" : index === 4 ? "h-full md:w-2/4" : "h-full md:w-2/3"}`}
               />
             </div>
-            <div className={`flex items-start w-full md:w-1/2 p-2 sm:p-5 ${index === 0 ? "justify-start" : "justify-end items-end"}`}>
-              <h3 className="text-4xl md:text-5xl lg:text-6xl fh:text-7xl font-medium mb-2 sm:mb-4">
-                {content.title}
+            <div className={`flex items-start w-full md:w-1/2 p-2 sm:p-5 ${index === 0 ? "justify-start" : index === 3 ? "justify-start items-end" : "justify-end items-end"}`}>
+            <h3 className="text-4xl fh:text-6xl font-medium mb-2 sm:mb-4">
+            {content.title}
               </h3>
             </div>
           </div>

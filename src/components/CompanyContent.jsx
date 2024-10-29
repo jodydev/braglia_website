@@ -27,7 +27,7 @@ const CompanyContent = () => {
         </div>
         <div className="flex justify-center items-center w-full md:w-1/3 mt-5 lg:mt-0 animate-fadeInRight">
           <img
-            src="https://picsum.photos/400/800"
+            src="https://picsum.photos/400/600"
             alt=""
             className="shadow-lg w-full h-auto max-w-xs md:max-w-sm"
           />
