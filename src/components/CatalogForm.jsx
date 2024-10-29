@@ -29,6 +29,24 @@ const CatalogForm = () => {
     window.open(file, "_blank");
   };
 
+  const downloadCatalog = (file) => {
+    try {
+      const link = document.createElement("a");
+      link.href = file;
+      link.download = file.split("/").pop();
+      console.log(link.download);
+      link.click();
+      toast.success(
+        `${t("The")} ${link.download.replace("_", " ").replace(".pdf", "")} ${t(
+          "downloaded successfully!"
+        )}`
+      );
+    } catch (error) {
+      console.error(error);
+      toast.error(`${t("Failed to download the catalog.")}`);
+    }
+  };
+
   return (
     <section
       id="catalog"
@@ -53,7 +71,7 @@ const CatalogForm = () => {
           <p className="text-black text-nowrap text-xl fh:text-4xl flex items-center justify-start lg:justify-center">
             Catalogo Completo
             <RiDownloadLine
-              onClick={() => openCatalog(CompleteCatalog)}
+              onClick={() => downloadCatalog(CompleteCatalog)}
               className="ms-3 inline-block text-2xl fh:text-4xl cursor-pointer"
             />
           </p>
