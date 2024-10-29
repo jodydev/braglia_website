@@ -32,7 +32,7 @@ const CompanyContent = () => {
             className="shadow-lg w-full h-auto max-w-xs md:max-w-sm"
           />
         </div>
-        <div className="hidden lg:flex flex-col space-y-5 absolute w-1/4 top-[50%] md:top-[75%] md:right-20">
+        <div className="hidden-mobile lg:flex flex-col space-y-5 absolute w-1/4 top-[50%] md:top-[75%] md:right-20">
           <Link
             to="/company"
             className="uppercase text-lg md:text-2xl border-2 border-black bg-black text-center py-3 px-10 md:px-20 text-white cursor-not-allowed transition-all duration-1000 ease-in-out"

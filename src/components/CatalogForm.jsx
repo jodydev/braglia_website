@@ -1,6 +1,7 @@
 import { RiDownloadLine } from "react-icons/ri";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { FaEye } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 import { colorIcons } from "../data/colorIcons";
 import "react-toastify/dist/ReactToastify.css";
@@ -24,22 +25,8 @@ const CatalogForm = () => {
     { name: "Inovel", fileName: InovelCatalog },
   ];
 
-  const downloadCatalog = (file) => {
-    try {
-      const link = document.createElement("a");
-      link.href = file;
-      link.download = file.split("/").pop();
-      console.log(link.download);
-      link.click();
-      toast.success(
-        `${t("The")} ${link.download.replace("_", " ").replace(".pdf", "")} ${t(
-          "downloaded successfully!"
-        )}`
-      );
-    } catch (error) {
-      console.error(error);
-      toast.error(`${t("Failed to download the catalog.")}`);
-    }
+  const openCatalog = (file) => {
+    window.open(file, "_blank");
   };
 
   return (
@@ -48,7 +35,7 @@ const CatalogForm = () => {
       className="flex flex-col h-auto lg:h-screen w-full relative px-0 py-10 md:py-0 fh:p-10"
     >
       <ToastContainer position="top-left" />
-      <div className="hidden lg:flex absolute inset-0 -z-50">
+      <div className="hidden-mobile lg:flex absolute inset-0 -z-50">
         {colorIcons.map((icon, index) => (
           <img
             key={index}
@@ -66,7 +53,7 @@ const CatalogForm = () => {
           <p className="text-black text-nowrap text-xl fh:text-4xl flex items-center justify-start lg:justify-center">
             Catalogo Completo
             <RiDownloadLine
-              onClick={() => downloadCatalog(CompleteCatalog)}
+              onClick={() => openCatalog(CompleteCatalog)}
               className="ms-3 inline-block text-2xl fh:text-4xl cursor-pointer"
             />
           </p>
@@ -84,8 +71,8 @@ const CatalogForm = () => {
                   </p>
                 </div>
                 <div className="flex flex-col w-full md:w-1/5 justify-end items-end">
-                  <RiDownloadLine
-                    onClick={() => downloadCatalog(category.fileName)}
+                  <FaEye
+                    onClick={() => openCatalog(category.fileName)}
                     className="ms-3 inline-block text-2xl fh:text-4xl cursor-pointer"
                   />
                 </div>
@@ -93,7 +80,7 @@ const CatalogForm = () => {
             ))}
           </div>
         </div>
-        <div className="hidden lg:flex flex-col items-center w-full md:w-1/3 fh:w-2/3">
+        <div className="hidden-mobile lg:flex flex-col items-center w-full md:w-1/3 fh:w-2/3">
           <div className="absolute w-1/4 top-[50%] fh:top-[60%] flex flex-col space-y-5">
             <Link
               to="/company"

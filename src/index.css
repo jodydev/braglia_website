@@ -87,3 +87,15 @@ input[type="checkbox"]:focus {
 ::-webkit-scrollbar-track {
   background: black;
 }
+
+@media (max-width: 768px) {
+  .hidden-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .hidden-no-mobile {
+    display: none;
+  }
+}

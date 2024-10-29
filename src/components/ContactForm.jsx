@@ -305,7 +305,7 @@ const ContactForm = () => {
             <p className="text-lg md:text-xl fh:text-3xl">orders@braglia.it</p>
           </div>
 
-          <div className="hidden lg:flex flex-col space-y-5 absolute w-1/4 top-[50%] md:top-[75%] md:right-20">
+          <div className="hidden-mobile lg:flex flex-col space-y-5 absolute w-1/4 top-[50%] md:top-[75%] md:right-20">
             <Link
               to="/company"
               className="uppercase text-lg md:text-2xl border-2 border-black text-center py-3 px-5 md:px-20 text-black hover:bg-black hover:text-white hover:cursor-pointer transition-all duration-700 ease-in-out "

@@ -18,7 +18,7 @@ const Hero = () => {
 
       <div className="flex flex-col relative z-50 space-y-0">
         <Header />
-        <main className="px-4 py-4 md:py-16 md:px-20 lg:px-24 lg:py-20 2xl:px-60 2xl:py-24 flex items-center justify-center lg:justify-start space-y-3">
+        <main className="py-10 md:py-16 md:px-20 lg:px-24 lg:py-20 2xl:px-60 2xl:py-24 flex items-center justify-center lg:justify-start space-y-3">
           <img
             src={Image}
             alt="Hero Image"
@@ -31,7 +31,7 @@ const Hero = () => {
         <div className="flex flex-col space-y-3 md:space-y-5 xl:space-y-8 w-full px-4 md:px-0">
           <Link
             to="/catalog"
-            className="uppercase text-sm md:text-xl lg:text-2xl flex items-center w-full justify-center  md:ml-8 md:hidden flex-row border-2 border-white text-center py-2 md:py-3 px-4 md:px-10 lg:px-20 text-white hover:bg-white hover:text-primary hover:border-primary cursor-pointer transition-all duration-700 ease-in-out"
+            className="uppercase text-sm md:text-xl lg:text-2xl flex items-center w-full justify-center  md:ml-8 hidden-no-mobile flex-row border-2 border-white text-center py-2 md:py-3 px-4 md:px-10 lg:px-20 text-white hover:bg-white hover:text-primary hover:border-primary cursor-pointer transition-all duration-700 ease-in-out"
           >
             {t("catalog")}
             <FaPlus className="text-base md:text-xl ml-2 md:ml-4" />

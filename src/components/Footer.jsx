@@ -24,7 +24,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex items-center justify-center sm:justify-start mb-4 sm:mb-0">
-            <img src={Logo} alt="Logo" className="hidden md:block h-12 sm:h-16" />
+            <img src={Logo} alt="Logo" className="hidden-mobile md:block h-12 sm:h-16" />
           </div>
         </div>
         <div className="mt-4 w-full h-[1px] bg-white"></div>
