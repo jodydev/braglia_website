@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 import { colorIcons } from "../data/colorIcons";
+import BackButton from "./BackButton";
 import "react-toastify/dist/ReactToastify.css";
+import Cube from "../assets/images/icons/cube.png";
+import Goccia from "../assets/images/icons/goccia.png";
 import CompleteCatalog from "../assets/pdf/Catalogo_Completo.pdf";
 import LanceCatalog from "../assets/pdf/Catalogo_Lance.pdf";
 import GettiCatalog from "../assets/pdf/Catalogo_Getti.pdf";
@@ -53,7 +56,7 @@ const CatalogForm = () => {
       className="flex flex-col h-auto lg:h-screen w-full relative px-0 py-10 md:py-0 fh:p-10"
     >
       <ToastContainer position="top-left" />
-      <div className="hidden-mobile lg:flex absolute inset-0 -z-50">
+      <div className="hidden-mobile md:flex absolute inset-0 -z-50">
         {colorIcons.map((icon, index) => (
           <img
             key={index}
@@ -63,12 +66,29 @@ const CatalogForm = () => {
           />
         ))}
       </div>
+      <div className="absolute md:hidden top-[10%] left-[-10%] lg:-left-20 lg:top-40 inset-0 z-50">
+        <img
+          src={Cube}
+          alt="Background"
+          className="object-cover w-[150px] h-[150px] lg:w-[250px] lg:h-[250px] opacity-20"
+        />
+      </div>
+      <div className="absolute md:hidden top-[70%] left-[55%] lg:left-[67%] lg:right-0 lg:top-60 inset-0 z-50">
+        <img
+          src={Goccia}
+          alt="Background"
+          className="object-cover w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] opacity-20"
+        />
+      </div>
       <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-32">
         <div className="w-full md:w-1/4 fh:w-2/3 flex-col items-start text-start lg:text-center md:text-left p-5 lg:p-0">
-          <h2 className="text-black text-4xl md:text-5xl fh:text-8xl italic mb-5">
+          <div className="absolute top-[3%] left-2">
+            <BackButton />
+          </div>
+          <h2 className="text-black text-4xl md:text-6xl fh:text-8xl italic mb-5">
             Cataloghi
           </h2>
-          <p className="text-black text-nowrap text-xl fh:text-4xl flex items-center justify-start lg:justify-center">
+          <p className="text-black text-nowrap text-xl md:text-2xl fh:text-4xl flex items-center justify-start lg:justify-center">
             Catalogo Completo
             <RiDownloadLine
               onClick={() => downloadCatalog(CompleteCatalog)}

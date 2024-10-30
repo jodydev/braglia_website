@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ToastContainer, toast } from "react-toastify";
+import BackButton from "./BackButton";
 import Cube from "../assets/images/icons/cube.png";
 import Goccia from "../assets/images/icons/goccia.png";
 import "react-toastify/dist/ReactToastify.css";
@@ -148,6 +149,9 @@ const ContactForm = () => {
           />
         </div>
         <div className="flex-col mb-0">
+          <div className="absolute left-2">
+            <BackButton />
+          </div>
           <h2 className="text-black text-4xl md:text-6xl fh:text-8xl italic w-full my-10 md:my-0">
             {t("contacts")}
           </h2>
@@ -275,7 +279,7 @@ const ContactForm = () => {
             </button>
           </form>
         </div>
-        <div className="flex flex-col items-start md:items-center w-full md:w-1/3 h-full mt-10 lg:mt-0">
+        <div className="flex flex-col items-start md:items-center w-full md:w-1/3 h-full my-10 md:my-0">
           <div className="flex flex-col justify-start items-start text-black">
             <h3 className="text-xl md:text-3xl fh:text-4xl uppercase italic font-semibold">
               Braglia s.r.l

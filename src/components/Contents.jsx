@@ -61,7 +61,7 @@ const Contents = ({ isCompanyPage }) => {
     <div className={`container mx-auto ${isCompanyPage ? "px-0 py-10" : "px-10 py-0"} 2xl:px-60`}>
       {isCompanyPage ? (
         <>
-          <div className="w-full">
+          <div className="w-full ">
             <iframe
               width="100%"
               height={isMobile ? "200" : "500"}
@@ -70,7 +70,7 @@ const Contents = ({ isCompanyPage }) => {
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="hover:scale-105 transition-all duration-500 ease-in-out shadow-lg"
+              className="shadow-lg"
             ></iframe>
 
             {staticCompanyContents.map((content, index) => (
@@ -92,7 +92,7 @@ const Contents = ({ isCompanyPage }) => {
                     className="hover:scale-105 transition-all duration-500 ease-in-out shadow-lg"
                   ></iframe>
                 </div>
-                <div className={`flex items-start w-full md:w-1/2 p-2 sm:p-5 ${index === 0  ? "justify-start items-end" : "justify-end items-end"}`}>
+                <div className={`flex items-start w-full md:w-1/2 p-2 sm:p-5 ${index === 0  ? "md:justify-start md:items-end" : "md:justify-end md:items-end"}`}>
                   <h3 className="text-4xl fh:text-6xl font-medium mb-2 sm:mb-4">
                     {content.title}
                   </h3>

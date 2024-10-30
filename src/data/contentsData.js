@@ -3,6 +3,7 @@ import Two from "../assets/images/contents/2.jpg";
 import Three from "../assets/images/contents/3.jpg";
 import Four from "../assets/images/contents/4.jpg";
 import Five from "../assets/images/contents/5.jpg";
+import Six from "../assets/images/contents/6.jpg";
 
 const contentsData = [
   {
@@ -32,4 +33,6 @@ const contentsData = [
   },
 ];
 
-export { contentsData };
+const imageHome = Six;
+
+export { contentsData, imageHome };
