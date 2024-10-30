@@ -93,7 +93,7 @@ const Contents = ({ isCompanyPage }) => {
                   ></iframe>
                 </div>
                 <div className={`flex items-start w-full md:w-1/2 p-2 sm:p-5 ${index === 0  ? "md:justify-start md:items-end" : "md:justify-end md:items-end"}`}>
-                  <h3 className="text-4xl fh:text-6xl font-medium mb-2 sm:mb-4">
+                  <h3 className="text-3xl md:text-4xl fh:text-6xl font-medium mb-2 sm:mb-4">
                     {content.title}
                   </h3>
                 </div>
@@ -116,8 +116,8 @@ const Contents = ({ isCompanyPage }) => {
                 className={`w-full h-auto hover:scale-105 transition-all duration-500 ease-in-out shadow-lg ${index === 0 ? "h-full" : index === 1 ? "h-full w-2/3" : index === 2 ? "h-full" : index === 4 ? "h-full md:w-2/4" : "h-full md:w-2/3"}`}
               />
             </div>
-            <div className={`flex items-start w-full md:w-1/2 p-2 sm:p-5 ${index === 0 ? "justify-start" : index === 3 ? "justify-start items-end" : "justify-end items-end"}`}>
-            <h3 className="text-4xl fh:text-6xl font-medium mb-2 sm:mb-4">
+            <div className={`flex items-start w-full md:w-1/2 p-2 sm:p-5 ${index === 0 ? "md:justify-start" : index === 3 ? "md:justify-start md:items-end" : "md:justify-end md:items-end"}`}>
+            <h3 className="text-3xl md:text-4xl fh:text-6xl font-medium mb-2 sm:mb-4">
             {content.title}
               </h3>
             </div>
