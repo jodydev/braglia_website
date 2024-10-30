@@ -9,27 +9,22 @@ import "react-toastify/dist/ReactToastify.css";
 import Cube from "../assets/images/icons/cube.png";
 import Goccia from "../assets/images/icons/goccia.png";
 import CompleteCatalog from "../assets/pdf/Catalogo_Completo.pdf";
-import LanceCatalog from "../assets/pdf/Catalogo_Lance.pdf";
-import GettiCatalog from "../assets/pdf/Catalogo_Getti.pdf";
-import UgelliCatalog from "../assets/pdf/Catalogo_Ugelli.pdf";
-import ComandiCatalog from "../assets/pdf/Catalogo_Comandi.pdf";
-import MasottiCatalog from "../assets/pdf/Catalogo_Masotti.pdf";
-import InovelCatalog from "../assets/pdf/Catalogo_Inovel.pdf";
+
 
 const CatalogForm = () => {
   const { t } = useTranslation();
 
   const categories = [
-    { name: "Lance", fileName: LanceCatalog },
-    { name: "Getti", fileName: GettiCatalog },
-    { name: "Ugelli", fileName: UgelliCatalog },
-    { name: "Comandi", fileName: ComandiCatalog },
-    { name: "Masotti", fileName: MasottiCatalog },
-    { name: "Inovel", fileName: InovelCatalog },
+    { name: "Lance", page: 13 },
+    { name: "Getti", page: 45 },
+    { name: "Ugelli", page: 107 },
+    { name: "Inovel", page: 181 },
+    { name: "Comandi", page: 225 },
+    { name: "Masotti", page: 309 },
   ];
 
-  const openCatalog = (file) => {
-    window.open(file, "_blank");
+  const openCatalog = (pageNumber) => {
+    window.open(`${CompleteCatalog}#page=${pageNumber}`, "_blank");
   };
 
   const downloadCatalog = (file) => {
@@ -110,7 +105,7 @@ const CatalogForm = () => {
                 </div>
                 <div className="flex flex-col w-full md:w-1/5 justify-end items-end">
                   <FaEye
-                    onClick={() => openCatalog(category.fileName)}
+                    onClick={() => openCatalog(category.page)}
                     className="ms-3 inline-block text-2xl fh:text-4xl cursor-pointer"
                   />
                 </div>
