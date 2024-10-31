@@ -86,10 +86,8 @@ const CatalogForm = () => {
       </div>
       <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-32">
         <div className="w-full md:w-1/4 fh:w-2/3 flex-col items-start text-start lg:text-center md:text-left p-5 lg:p-0">
-          <div className="absolute top-[3%] left-2">
-            <BackButton />
-          </div>
           <h2 className="text-black text-4xl md:text-6xl fh:text-8xl italic mb-5">
+            <BackButton />
             Cataloghi
           </h2>
           <p className="text-black text-nowrap text-xl md:text-2xl fh:text-4xl flex items-center justify-start lg:justify-center">

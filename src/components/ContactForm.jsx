@@ -149,10 +149,9 @@ const ContactForm = () => {
           />
         </div>
         <div className="flex-col mb-0">
-          <div className="absolute left-2">
-            <BackButton />
-          </div>
+          
           <h2 className="text-black text-4xl md:text-6xl fh:text-8xl italic w-full my-10 md:my-0">
+          <BackButton />
             {t("contacts")}
           </h2>
         </div>

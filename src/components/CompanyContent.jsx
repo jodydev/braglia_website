@@ -15,10 +15,8 @@ const CompanyContent = () => {
     >
       <div className="flex flex-col md:flex-row justify-between h-full gap-x-5">
         <div className="flex flex-col items-start mb-5 md:mb-0 ">
-          <div className="absolute top-[15%] left-2">
-            <BackButton />
-          </div>
           <h2 className="text-black text-4xl md:text-4xl lg:text-5xl fh:text-8xl w-full mb-5 italic">
+            <BackButton />
             Braglia <br /> {t("company")}
           </h2>
           <p className="text-black text-2xl md:text-3xl lg:text-4xl fh:text-6xl flex items-center">
