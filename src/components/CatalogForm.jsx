@@ -61,7 +61,7 @@ const CatalogForm = () => {
           />
         ))}
       </div>
-      <div className="absolute md:hidden top-[10%] left-[-10%] lg:-left-20 lg:top-40 inset-0 z-50">
+      <div className="absolute md:hidden top-[10%] left-[-10%] lg:-left-20 lg:top-40 inset-0 -z-50">
         <img
           src={Cube}
           alt="Background"
