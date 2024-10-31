@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { RiDownloadLine } from "react-icons/ri";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
@@ -9,7 +10,6 @@ import "react-toastify/dist/ReactToastify.css";
 import Cube from "../assets/images/icons/cube.png";
 import Goccia from "../assets/images/icons/goccia.png";
 import CompleteCatalog from "../assets/pdf/Catalogo_Completo.pdf";
-
 
 const CatalogForm = () => {
   const { t } = useTranslation();
@@ -23,16 +23,25 @@ const CatalogForm = () => {
     { name: "Masotti", page: 309 },
   ];
 
+  // Funzione per aprire il catalogo in base al dispositivo
   const openCatalog = (pageNumber) => {
     window.open(`${CompleteCatalog}#page=${pageNumber}`, "_blank");
+
+    // const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    // if (isMobile) {
+    //   setOpenMobilePdf(true);
+    // } else {
+    //   window.open(`${CompleteCatalog}#page=${pageNumber}`, "_blank");
+    // }
   };
 
+  // Funzione per scaricare il catalogo
   const downloadCatalog = (file) => {
     try {
       const link = document.createElement("a");
       link.href = file;
       link.download = file.split("/").pop();
-      console.log(link.download);
       link.click();
       toast.success(
         `${t("The")} ${link.download.replace("_", " ").replace(".pdf", "")} ${t(
