@@ -28,7 +28,7 @@ const Hero = () => {
         </main>
       </div>
 
-      <div className={`${isIOS ? "bottom-36 " : "bottom-20 "} w-4/5 sm:w-3/5 md:w-2/5 lg:w-1/4 2xl:w-1/4 3xl:w-1/3 z-50 absolute sm:bottom-32 md:bottom-20 fh:bottom-52 right-11 sm:right-36 md:right-5 lg:right-10 2xl:right-20 3xl:bottom-32 flex justify-center items-center text-white`}>
+      <div className={`${isIOS ? "bottom-36 " : "bottom-44 "} w-4/5 sm:w-3/5 md:w-2/5 lg:w-1/4 2xl:w-1/4 3xl:w-1/3 z-50 absolute sm:bottom-32 md:bottom-20 fh:bottom-52 right-11 sm:right-36 md:right-5 lg:right-10 2xl:right-20 3xl:bottom-32 flex justify-center items-center text-white`}>
         <div className="flex flex-col space-y-3 md:space-y-5 xl:space-y-8 w-full px-4 md:px-0">
           <Link
             to="/catalog"
